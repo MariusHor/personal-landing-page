@@ -1,0 +1,12 @@
+.nav {
+    display: flex;
+    align-items: center;
+
+    &__list {
+        display: flex;
+        list-style: none;
+        gap: 1rem;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 700;
+    }
+}

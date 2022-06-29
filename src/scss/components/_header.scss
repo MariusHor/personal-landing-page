@@ -1,0 +1,12 @@
+.header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 13.5rem;
+    color: white;
+
+    .logo__text {
+        font-family: 'Permanent Marker', cursive;
+        font-size: 2rem;
+    }
+}
