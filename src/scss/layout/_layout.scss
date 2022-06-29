@@ -1,39 +1,11 @@
-@use '../abstracts' as *;
+@use "../abstracts" as *;
 
 body {
-    position: relative;
-    background: url(/src/img/pexels-stein-egil-liland-3374210.jpg) no-repeat;
-    background-size: cover;
-
-    a {
-        color: inherit;
-        text-decoration: none;
-    }  
-
-    a:hover {
-        color: aqua;
-        transition: ease-in-out 500ms;
-    }
-
-    a:focus  {
-        outline-color: aqua;
-        outline-offset: 0.2rem;
-    }
-}
-
-body::before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.6;
-    background: linear-gradient(-50deg, black, rgb(51, 0, 51));
-    background-position: 50% 0;
-    background-size: cover;
+  background: #000;
+  .container {
+    width: clamp(16rem, 90vw, 85rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem 0;
   }
-
-
-
+}
