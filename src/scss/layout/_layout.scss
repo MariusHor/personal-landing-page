@@ -4,6 +4,21 @@ body {
     position: relative;
     background: url(/src/img/pexels-stein-egil-liland-3374210.jpg) no-repeat;
     background-size: cover;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }  
+
+    a:hover {
+        color: aqua;
+        transition: ease-in-out 500ms;
+    }
+
+    a:focus  {
+        outline-color: aqua;
+        outline-offset: 0.2rem;
+    }
 }
 
 body::before {
@@ -20,12 +35,5 @@ body::before {
     background-size: cover;
   }
 
-a {
-    color: inherit;
-    text-decoration: none;
-}  
 
-a:hover {
-    color: aqua;
-    transition: ease-in-out 500ms;
-}
+

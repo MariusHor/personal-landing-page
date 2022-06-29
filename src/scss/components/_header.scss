@@ -2,11 +2,24 @@
     position: relative;
     display: flex;
     justify-content: space-between;
-    padding: 1rem 13.5rem;
+    gap: 2rem;
+    width: clamp(16rem, 90vw, 85rem);
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
     color: white;
 
     .logo__text {
         font-family: 'Permanent Marker', cursive;
         font-size: 2rem;
+        transform: skew(-0.01turn, -5deg);
+    }
+
+    .logo__symbol {
+        color: aqua;
+    }
+    
+    .logo__text:hover .logo__symbol { 
+        color: white;
     }
 }
