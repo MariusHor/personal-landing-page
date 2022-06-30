@@ -19,6 +19,7 @@
     
     .logo:hover .logo__symbol { 
         color: white;
+        transition: ease-in-out 500ms;
     }
 }
 

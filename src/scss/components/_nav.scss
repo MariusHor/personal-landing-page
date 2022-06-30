@@ -31,9 +31,15 @@
     cursor: pointer;
   }
 
+  .hamburger:hover {
+    color: aqua;
+    transition: ease-in-out 500ms;
+  }
+
   .hamburger:focus {
     outline: none;
   }
+
 }
 
 @media screen and (min-width: $layout-breakpoint-desktop) {
