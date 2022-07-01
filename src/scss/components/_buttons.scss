@@ -1,9 +1,7 @@
 @use "../abstracts" as *;
 
 .cta-button {
-    background: $color-bg;
-    color: $color-secondary;
-    mix-blend-mode: screen;
+    background: rgb(48 40 193 / 20%);
     font-weight: $fw-secondary;
     border-radius: 0.2rem;
     padding: 0.6rem 2rem;
@@ -15,4 +13,25 @@
     transform: scale(1.02);
     transition: $transition-one;
     color: $color-primary;
+}
+
+.theme-switch {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 1.6rem;
+}
+
+.theme-switch:hover {
+    transform: scale(1.2);
+    transition: ease-in 200ms;
+}
+
+.theme-switch:active {
+    transform: scale(1);
+    transition: ease-in 100ms;
+}
+
+.hide {
+    display: none;
 }

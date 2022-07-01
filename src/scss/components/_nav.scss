@@ -16,7 +16,7 @@
   }
 
   &__logo:hover .symbol {
-    color: $color-secondary;
+    color: white;
     transition: $transition-one;
   }
 
@@ -30,7 +30,7 @@
 
   //HAMBURGER MENU
   &__hamburger {
-    color: $color-secondary;
+    color: inherit;
     font-size: 2rem;
     background-color: transparent;
     border: 0;
