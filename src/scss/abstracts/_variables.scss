@@ -1,9 +1,32 @@
 //COLORS
-
+$color-primary: hsl(16, 88%, 54%); 
+$color-secondary: hsl(220, 16%, 96%);
+$color-hover: hsl(16, 88%, 54%); 
+$color-bg: hsl(0, 0%, 0%);
 
 //TYPOGRAPHY
+$font-sm: 0.875rem; // 14px
+$font-med: 1rem; // 16px
+$font-lg: 1.25rem; // 20px
+$font-xlg: 1.5rem; // 24px
+$font-2xlg: 1.75rem; // 28px
+$font-3xlg: 2rem; // 32px
+$ff-primary: "Poppins", sans-serif;
+$ff-secondary: 'Permanent Marker', cursive;
+$fw-primary: 400;
+$fw-secondary: 700;
 
+//TRANSITIONS
+
+$transition-one: ease-in-out 200ms;
 
 //BREAKPOINTS
 
+$breakpoints: (
+    small: 36em,
+    medium: 48em,
+    large: 62em,
+    xlarge: 75em
+);
+$layout-breakpoint-tablet: 36em;
 $layout-breakpoint-desktop: 62em;

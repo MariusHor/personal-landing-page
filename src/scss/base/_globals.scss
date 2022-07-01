@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+body {
+    background: $color-bg;
+    font-size: $font-sm;
+    color: $color-secondary;
+    font-family: $ff-primary;
+    line-height: 1.6;
+    
+    @include breakpoint(large) {
+      font-size: $font-med;
+  }
+
+  .accent {
+    color: $color-primary;
+  }
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+p {
+
+}

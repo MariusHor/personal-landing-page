@@ -1,16 +1,36 @@
 @use "../abstracts" as *;
 
-a {
+a, a:visited {
   color: inherit;
-  text-decoration: none;
 }
 
 a:hover {
-  color: aqua;
-  transition: ease-in-out 500ms;
+  color: $color-hover;
+  transition: $transition-one;
 }
 
 a:focus {
-  outline-color: aqua;
+  outline-color: $color-primary;
   outline-offset: 0.2rem;
+  outline-style: dotted;
+  outline-width: 0.15rem;
+}
+
+.nav__item {
+  position: relative;
+}
+
+.nav__item::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 2px;
+  background-color: $color-secondary;
+  left: 0;
+  bottom: -2px;
+}
+
+.nav__item:hover::after {
+  width: 100%;
+  transition: 0.5s ease-in-out;
 }

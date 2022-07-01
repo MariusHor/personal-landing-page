@@ -7,44 +7,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Provides a brief summary of a web page -->
     <title>Personal Landing Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d73036c961.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/d73036c961.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!--HEADER-->
     <header class="header">
-      <div class="container">
-        <nav class="nav">
-          <a class="logo" href="#"><span class="logo__symbol">&#60;</span>Marius__Horghidan<span class="logo__symbol">&#62;</span></a>
-          <button class="hamburger" id="hamburger">
+      <nav class="nav">
+        <div class="container">
+          <a class="nav__logo" href="#"><span class="symbol accent">&#60;</span>Marius__Horghidan<span class="symbol accent">&#62;</span></a>
+          <button class="nav__hamburger" id="hamburger">
             <i class="fa-solid fa-bars"></i>
           </button>
           <ul class="nav__ul" id="nav-ul">
-            <p class="logo__symbol logo__symbol--hide">&#91;</p>
+            <p class="symbol accent symbol--hide">&#91;</p>
             <li><a href="#" class="nav__item">Home</a></li>
             <li><a href="#" class="nav__item">About</a></li>
             <li><a href="#" class="nav__item">Projects</a></li>
             <li><a href="#" class="nav__item">Contact</a></li>
-            <p class="logo__symbol logo__symbol--hide">&#93;</p>
+            <p class="symbol accent symbol--hide">&#93;</p>
           </ul>
         </nav>
+        </div>
+      <div class="hero container-lg">
+        <div class="container hero-padding">
+          <div class="hero__text">
+            <h1 class="hero__title">Hi, I'm <span class="accent">Marius</span> and I'm a Frontend Web Developer<span class="accent">.</span></h1>
+            <p class="hero__description">Listen, Create, <span class="accent">Deliver</span><span class="accent">.</span></p>
+            <button class="cta-button">Portfolio</button>
+            <button class="cta-button">Hire me!</button>
+          </div>
+          <img class ="hero__img" src="./img/1656702220900-removebg-preview.png" alt="" class="hero__img">
+        </div>
       </div>
     </header>
     <!--HEADER END-->
     <!--MAIN-->
-    <main class="main">
-      <div class="container"></div>
-    </main>
+    <main class="main container"></main>
     <!--MAIN END-->
     <!--FOOTER-->
-    <footer class="footer">
-      <div class="container"></div>
-    </footer>
+    <footer class="footer container"></footer>
     <!--FOOTER END-->
   </body>
 </html>
