@@ -12,6 +12,6 @@ themeBtn.addEventListener('click', () => {
     } else {
         sunIcon.classList.remove('hide')
         moonIcon.classList.toggle('hide')
+
     }
 })
-

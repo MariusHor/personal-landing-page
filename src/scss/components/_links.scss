@@ -18,23 +18,6 @@ a:focus {
 
 .nav__item {
   position: relative;
-}
-
-.nav__item::after {
-  position: absolute;
-  content: '';
-  width: 0;
-  height: 2px;
-  background-color: black;
-  left: 0;
-  bottom: -2px;
-}
-
-.nav__item[modified]::after {
-  background-color: black;
-}
-
-.nav__item:hover::after {
-  width: 100%;
-  transition: 0.5s ease-in-out;
+  transition: ease-in-out 900ms;
+  z-index: 1;
 }

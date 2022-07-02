@@ -8,6 +8,7 @@
     transform: skew(-0.01turn, -5deg);
     font-family: $ff-secondary;
     font-size: $font-lg;
+    transition: ease-in-out 500ms;
     @include breakpoint(large) {
       font-size: $font-xlg;
     }
@@ -62,7 +63,7 @@
       display: flex;
       flex-direction: row;
       width: initial;
-  }
+    }
   }
 
   &__ul.show {
