@@ -10,13 +10,12 @@ body {
     @include breakpoint(large) {
       font-size: $font-med;
   }
-
-  .light-theme {
-    background: $color-bg-light;
-    color: $color-font-light; 
-  }
-
   .accent {
     color: $color-primary;
   }
+}
+
+.light-theme {
+  background: $color-bg-light;
+  color: $color-font-light; 
 }

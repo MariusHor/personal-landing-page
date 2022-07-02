@@ -1,18 +1,23 @@
 @use "../abstracts" as *;
 
 .cta-button {
-    background: rgb(48 40 193 / 20%);
+    background: rgb(48 40 193 / 50%);
     border-radius: 0.2rem;
     padding: 0.6rem 2rem;
-    border: solid 2px $color-primary;
+    border: none;
     cursor: pointer;
     margin-bottom: 1rem;
+    border: solid 1px transparent;
+    font-weight: $fw-secondary;
 }
 
 .cta-button:hover {
-    transform: scale(1.02);
     transition: $transition-one;
     color: $color-primary;
+    background: rgba(22, 19, 85, 0.8);
+    color: $color-primary;
+    border: solid 1px $color-primary;
+    color: honeydew;
 }
 
 .theme-switch {
