@@ -1,0 +1,11 @@
+@use "../abstracts" as *;
+
+.main {
+    .title {
+        margin-top: 10rem;
+        &__text {
+          width: fit-content;
+          margin: 0 auto;
+        }
+      }
+}

@@ -28,6 +28,7 @@
 
   //HAMBURGER MENU
   &__hamburger {
+    display: block;
     color: inherit;
     font-size: 2rem;
     background-color: transparent;
@@ -37,41 +38,135 @@
     @include breakpoint(large) {
         display: none;
     }
+
+    &__hamburger:hover {
+      color: $color-hover;
+      transition: $transition-one;
+    }
+
+    &__hamburger:focus {
+      outline: none;
+    } 
   }
 
-  &__hamburger:hover {
-    color: $color-hover;
-    transition: $transition-one;
+
+
+  //HAMBURGER BARS
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition:  all 0.3s ease-in-out;
+    background-color: white;
   }
 
-  &__hamburger:focus {
-    outline: none;
+
+  .bar--light {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition:  all 0.3s ease-in-out;
+    background-color: black;
+  }
+    
+  
+    //Bars transition
+  &__hamburger.active .bar:nth-child(2) {
+    opacity: 0;
   }
 
-  //NAV RIGHT
+  &__hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &__hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  &__hamburger.active .bar--light:nth-child(2) {
+    opacity: 0;
+  }
+
+  &__hamburger.active .bar--light:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  &__hamburger.active .bar--light:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
+
+  //NAV RIGHT MENU
   &__right {
     display: flex;
-    flex-direction: row;
     gap: 1rem;
   }
 
-  &__ul {
-    align-self: center;
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    width: 100%;
+  &__menu {
     font-size: $font-med;
     font-weight: $fw-secondary;
-
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
     @include breakpoint(large) {
       display: flex;
       flex-direction: row;
       width: initial;
+      gap: 1rem;
+      position: initial;
+      align-items: center;
+    }
+  }
+  
+  &__menu.active {
+    left: 0;
+    background-color: black;
+    padding: 2rem 0;
+    @include breakpoint(large) {
+      display: none;
     }
   }
 
-  &__ul.show {
-    @extend %center;
+  &__menu--light {
+    font-size: $font-med;
+    font-weight: $fw-secondary;
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap: 0;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    @include breakpoint(large) {
+      display: flex;
+      flex-direction: row;
+      width: initial;
+      gap: 1rem;
+      position: initial;
+      align-items: center;
+    }
+  }
+  
+  &__menu--light.active {
+    left: 0;
+    background-color: white;
+    padding: 2rem 0;
+    @include breakpoint(large) {
+      display: none;
+    }
+  }
+
+  &__item {
+    margin: 16px 0;
+    transition: ease-in-out 900ms;
   }
 }

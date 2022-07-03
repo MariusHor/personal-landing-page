@@ -25,16 +25,16 @@
     border: none;
     cursor: pointer;
     font-size: 1.4rem;
+    transition: ease-in 300ms;
 }
 
 .theme-switch:hover {
     transform: scale(1.2);
-    transition: ease-in 200ms;
+
 }
 
 .theme-switch:active {
     transform: scale(1);
-    transition: ease-in 100ms;
 }
 
 .hide {

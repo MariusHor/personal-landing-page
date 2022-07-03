@@ -1,6 +1,12 @@
-const navUl = document.getElementById('nav-ul');
-const hamburger = document.getElementById('hamburger');
+const navMenu = document.querySelector('.nav__menu');
+const hamburger = document.querySelector('.nav__hamburger');
+
 
 hamburger.addEventListener('click', () => {
-    navUl.classList.toggle('show');
+    hamburger.classList.toggle('active');
+    navMenu.classList.toggle('active');
 });
+
+window.addEventListener("resize", function() {
+    if (window.innerWidth > 992) navMenu.classList.remove("active");
+  });
