@@ -3,16 +3,16 @@
 .cta-button {
     background: rgb(48 40 193 / 50%);
     border-radius: 0.2rem;
-    padding: 0.6rem 2rem;
+    padding: 0.3rem 1.8rem;
     border: none;
     cursor: pointer;
     margin-bottom: 1rem;
     border: solid 1px transparent;
     font-weight: $fw-secondary;
+    transition: $transition-one;
 }
 
 .cta-button:hover {
-    transition: $transition-one;
     color: $color-primary;
     background: rgba(22, 19, 85, 0.8);
     color: $color-primary;

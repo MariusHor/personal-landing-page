@@ -6,7 +6,7 @@ const body = document.querySelector('body')
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme')
 
-    if(body.classList.contains('light-theme')) {
+  if(body.classList.contains('light-theme')) {
         moonIcon.classList.remove('hide')
         sunIcon.classList.toggle('hide')
     } else {

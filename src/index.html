@@ -29,27 +29,31 @@
     <header class="header">
       <nav class="nav">
         <div class="container">
-          <a class="nav__logo" href="#"><span class="symbol accent">&#60;</span>Marius__Horghidan<span class="symbol accent">&#62;</span></a>
-          <button class="theme-switch">
-            <i id='moon-icon' class="fa-solid fa-moon hide"></i>
-            <i id='sun-icon' class="fa-solid fa-sun"></i>
-          </button>
+          <a class="nav__logo" href="#"><span class="symbol accent">&#60;</span>M<span class="symbol accent">&#62;</span></a>
+          <div class="nav__right">
+            <ul class="nav__ul" id="nav-ul">
+              <li class="symbol accent symbol--hide">&#91;</li>
+              <li><a class='nav__item' href="#">Home</a></li>
+              <li><a class='nav__item' href="#">About</a></li>
+              <li><a class='nav__item' href="#">Projects</a></li>
+              <li><a class='nav__item'href="#">Contact</a></li>
+              <li class="symbol accent symbol--hide">&#93;</li>
+            </ul>
+            <button class="theme-switch">
+              <i id='moon-icon' class="fa-solid fa-lightbulb hide"></i>
+              <i id='sun-icon' class="fa-regular fa-lightbulb"></i>
+              <!--<i id='moon-icon' class="fa-solid fa-moon hide"></i>
+              <i id='sun-icon' class="fa-solid fa-sun"></i> -->
+            </button>
+          </div>
           <button class="nav__hamburger" id="hamburger">
             <i class="fa-solid fa-bars"></i>
           </button>
-          <ul class="nav__ul" id="nav-ul">
-            <p class="symbol accent symbol--hide">&#91;</p>
-            <li><a class='nav__item' href="#">Home</a></li>
-            <li><a class='nav__item' href="#">About</a></li>
-            <li><a class='nav__item' href="#">Projects</a></li>
-            <li><a class='nav__item'href="#">Contact</a></li>
-            <p class="symbol accent symbol--hide">&#93;</p>
-          </ul>
         </div>
       </nav>
 
-      <div class="hero container-lg">
-        <div class="container hero-padding">
+      <div class="hero">
+        <div class="container hero-container">
           <div class="hero__text">
             <h1 class="hero__title">Hi, I'm <span class="accent">Marius</span> and I'm a Frontend Web Developer<span class="accent">.</span></h1>
             <p class="hero__description">Listen, Create, <span class="accent">Deliver</span><span class="accent">.</span></p>
@@ -62,10 +66,31 @@
     </header>
     <!--HEADER END-->
     <!--MAIN-->
-    <main class="main"></main>
+    <main class="main">
+      <div class="title">
+        <h1 class="title__text">Become a standout<span class="accent">.</span></h1>
+      </div>
+    </main>
     <!--MAIN END-->
     <!--FOOTER-->
-    <footer class="footer"></footer>
+    <footer class="footer">
+      <div class="footer__container">
+        <a class="nav__logo footer__logo" href="#"><span class="symbol accent">&#60;</span>M<span class="symbol accent">&#62;</span></a>
+        <ul class="footer__ul" id="nav-ul">
+          <li><a class='nav__item' href="#">Home</a></li>
+          <li><a class='nav__item' href="#">About</a></li>
+          <li><a class='nav__item' href="#">Projects</a></li>
+          <li><a class='nav__item'href="#">Contact</a></li>
+        </ul>
+        <div class="socials center-self">
+          <a class="socials__in" href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a class="socials__gh" href="#"><i class="fa-brands fa-github"></i></a>
+          <a class="socials__ig" href="#"><i class="fa-brands fa-instagram"></i></a>
+          <a class="socials__tw" href="#"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <p class="footer__copyright">&copy; 2020 Marius Horghidan</p>
+    </footer>
     <!--FOOTER END-->
   </body>
 </html>

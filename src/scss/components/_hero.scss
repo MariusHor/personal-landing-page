@@ -2,14 +2,8 @@
 
 .hero {
     background: url(/src/img/output-onlinepngtools.png) no-repeat;
-    width: 70%;
-    top: 200px;
-    right: 200px;
-    overflow: hidden;
-
-    .hero-padding {
+    .hero-container {
         padding-top: 2rem;
-        padding-left: 2rem;
         padding-right: 2rem;
     }
     &__img {
@@ -30,11 +24,4 @@
         font-weight: $fw-secondary;
         margin-bottom: 4rem;
     }
-}
-    
-.container-lg {
-    width: clamp(16rem, 90vw, 125rem);
-    margin-left: auto;
-    margin-right: auto;
-    border: solid 1px rgb(56, 56, 56);
 }
