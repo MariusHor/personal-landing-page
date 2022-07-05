@@ -108,7 +108,7 @@
   &__menu {
     font-size: $font-med;
     font-weight: $fw-secondary;
-    position: fixed;
+    position: absolute;
     left: -100%;
     top: 70px;
     gap: 0;
