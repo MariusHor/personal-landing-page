@@ -7,8 +7,3 @@ hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
 
-window.addEventListener("resize", function() {
-    if (window.innerWidth > 992) {
-        navMenu.classList.remove("active");
-        hamburger.classList.remove('active');}
-  }); 

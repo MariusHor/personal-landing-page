@@ -13,14 +13,16 @@
     }
   }
 
+  &__logo .symbol {
+    transition: $transition-one;
+  }
+
   &__logo:hover .symbol {
     color: black;
-    transition: $transition-one;
   }
 
   .symbol--hide {
     display: none;
-
     @include breakpoint(large) {
       display: inline-block;
   }
@@ -106,18 +108,19 @@
   }
 
   &__menu {
-    font-size: $font-med;
-    font-weight: $fw-secondary;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
     position: absolute;
     left: -100%;
     top: 70px;
-    gap: 0;
-    flex-direction: column;
-    width: 100%;
     text-align: center;
+    font-size: $font-med;
+    font-weight: $fw-secondary;
+    width: 100%;
     transition: 0.3s;
+    z-index: 100;
     @include breakpoint(large) {
-      display: flex;
       flex-direction: row;
       width: initial;
       gap: 1rem;
@@ -130,24 +133,22 @@
     left: 0;
     background-color: black;
     padding: 2rem 0;
-    @include breakpoint(large) {
-      display: none;
-    }
   }
 
   &__menu--light {
-    font-size: $font-med;
-    font-weight: $fw-secondary;
-    position: fixed;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: absolute;
     left: -100%;
     top: 70px;
-    gap: 0;
-    flex-direction: column;
-    width: 100%;
     text-align: center;
+    font-size: $font-med;
+    font-weight: $fw-secondary;
+    width: 100%;
     transition: 0.3s;
+    z-index: 100;
     @include breakpoint(large) {
-      display: flex;
       flex-direction: row;
       width: initial;
       gap: 1rem;
@@ -160,13 +161,10 @@
     left: 0;
     background-color: white;
     padding: 2rem 0;
-    @include breakpoint(large) {
-      display: none;
-    }
   }
 
   &__item {
     margin: 16px 0;
-    transition: ease-in-out 900ms;
+    transition: ease-in-out 500ms;
   }
 }

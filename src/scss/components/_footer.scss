@@ -53,6 +53,9 @@
             justify-content: flex-end;
             align-items: center;
         }
+        &__hover {
+            transition: ease-out 0.3s;
+        }
     }
 //COPYRIGHT
     &__copyright {
