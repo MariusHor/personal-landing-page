@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+//SOCIALS
+.socials {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    @include breakpoint(large) {
+        justify-content: flex-end;
+        align-items: center;
+    }
+    &__hover {
+        transition: ease-out 0.3s;
+    }
+}
+
+.socials--nav {
+    font-size: 1.4rem;
+}
+
+.hide {
+    @include breakpoint(large) {
+        display: none;
+    }
+}

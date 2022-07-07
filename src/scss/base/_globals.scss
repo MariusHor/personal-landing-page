@@ -20,3 +20,12 @@ body {
   color: $color-font-light; 
 }
 
+
+.overflow-hidden {
+  overflow: hidden;
+  @include breakpoint(large) {
+    overflow: initial;
+}
+}
+
+
