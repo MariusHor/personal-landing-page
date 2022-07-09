@@ -2,9 +2,8 @@
 
 //SOCIALS
 .socials {
-    display: flex;
-    gap: 1.5rem;
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    width: 30%;
     font-size: 1.5rem;
     margin: 3rem 0 4rem;
     @include breakpoint(large) {
@@ -14,4 +13,11 @@
     &__hover {
         transition: ease-out 0.3s;
     }
+}
+
+.footer .socials {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    width: 100%;
 }

@@ -9,6 +9,7 @@ themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme')
 
   if(body.classList.contains('light-theme')) {
+        document.body.classList.remove('dark-theme')
         moonIcon.classList.remove('hide')
         sunIcon.classList.toggle('hide')
         navMenu.classList.remove('nav__menu')
@@ -20,6 +21,7 @@ themeBtn.addEventListener('click', () => {
             bar.classList.add('bar--light');
           }
     } else {
+        document.body.classList.toggle('dark-theme')
         sunIcon.classList.remove('hide')
         moonIcon.classList.toggle('hide')
         navMenu.classList.remove('nav__menu--light')

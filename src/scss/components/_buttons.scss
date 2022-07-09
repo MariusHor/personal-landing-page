@@ -13,6 +13,11 @@
     font-weight: $fw-secondary;
     transition: $transition-one;
     border: solid 1px #ffbb00;
+    filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, .5));
+}
+
+.dark-theme .cta-button {
+    filter: drop-shadow(0px 0px 3px rgba(255, 255, 255, 0.5));
 }
 
 .cta-button:hover {
@@ -37,12 +42,12 @@
 }
 
 .theme-switch:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
 
 }
 
 .theme-switch:active {
-    transform: scale(1);
+    transform: scale(0.95);
 }
 
 .hide {
