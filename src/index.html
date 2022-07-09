@@ -29,44 +29,49 @@
     <header class="header">
       <nav class="nav">
         <div class="container">
-          <a class="nav__logo" href="#"><span class="symbol accent">&#60;</span>M<span class="symbol accent">&#62;</span></a>
+          <div>
+            <a class="nav__logo" href="#"><span class="symbol accent">&#60;</span>M<span class="symbol accent">&#62;</span></a>
+          </div>      
           <div class="nav__right">
-            <ul class="nav__menu" id="nav-ul">
-              <li class="symbol accent symbol--hide">&#91;</li>
-              <li><a class='nav__item' href="#">Home</a></li>
-              <li><a class='nav__item' href="#">About</a></li>
+            <div class="symbol accent symbol--hide">&#91;</div>
+            <ul class="nav__menu--desktop">
+              <li><a class='nav__item' href="#">Services</a></li>
               <li><a class='nav__item' href="#">Projects</a></li>
               <li><a class='nav__item'href="#">Contact</a></li>
-              <li class="symbol accent symbol--hide">&#93;</li>
-              <div class="socials socials--nav hide">
-                <a href="#"><i class="fa-brands fa-linkedin-in socials__hover"></i></a>
-                <a href="#"><i class="fa-brands fa-github socials__hover"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram socials__hover"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter socials__hover"></i></a>
-              </div>
             </ul>
+            <span class="symbol accent symbol--hide">&#93;</span>
             <button class="theme-switch">
               <i id='moon-icon' class="fa-solid fa-lightbulb hide"></i>
               <i id='sun-icon' class="fa-regular fa-lightbulb"></i>
               <!--<i id='moon-icon' class="fa-solid fa-moon hide"></i>
               <i id='sun-icon' class="fa-solid fa-sun"></i> -->
             </button>
+            <div class="nav__hamburger" id="hamburger">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+            </div>
           </div>
-          <div class="nav__hamburger" id="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+          <ul class="nav__menu">
+            <li><a class='nav__item' href="#">Services</a></li>
+            <li><a class='nav__item' href="#">Projects</a></li>
+            <li><a class='nav__item'href="#">Contact</a></li>
+            <li class="socials hide">
+              <a href="#"><i class="fa-brands fa-linkedin-in socials__hover"></i></a>
+              <a href="#"><i class="fa-brands fa-github socials__hover"></i></a>
+              <a href="#"><i class="fa-brands fa-instagram socials__hover"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter socials__hover"></i></a>
+            </li>
+          </ul>
         </div>
       </nav>
 
       <div class="hero">
-        <div class="container hero-container">
+        <div class="hero-container">
           <div class="hero__text">
             <h1 class="hero__title">Hi, I'm <span class="accent">Marius</span> and I'm a Frontend Web Developer<span class="accent">.</span></h1>
             <p class="hero__description">Listen, Create, <span class="accent">Deliver</span><span class="accent">.</span></p>
             <button class="cta-button">Portfolio</button>
-            <button class="cta-button">Hire me!</button>
           </div>
           <img class ="hero__img" src="./img/1656702220900-removebg-preview.png" alt="" class="hero__img">
         </div>
@@ -82,20 +87,11 @@
     <!--MAIN END-->
     <!--FOOTER-->
     <footer class="footer">
-      <div class="footer__container">
-        <a class="nav__logo footer__logo" href="#"><span class="symbol accent">&#60;</span>M<span class="symbol accent">&#62;</span></a>
-        <ul class="footer__ul" id="nav-ul">
-          <li><a class='nav__item' href="#">Home</a></li>
-          <li><a class='nav__item' href="#">About</a></li>
-          <li><a class='nav__item' href="#">Projects</a></li>
-          <li><a class='nav__item'href="#">Contact</a></li>
-        </ul>
-        <div class="socials center-self">
-          <a href="#"><i class="fa-brands fa-linkedin-in socials__hover"></i></a>
-          <a href="#"><i class="fa-brands fa-github socials__hover"></i></a>
-          <a href="#"><i class="fa-brands fa-instagram socials__hover"></i></a>
-          <a href="#"><i class="fa-brands fa-twitter socials__hover"></i></a>
-        </div>
+      <div class="socials">
+        <a href="#"><i class="fa-brands fa-linkedin-in socials__hover"></i></a>
+        <a href="#"><i class="fa-brands fa-github socials__hover"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram socials__hover"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter socials__hover"></i></a>
       </div>
       <p class="footer__copyright">&copy; 2022 Marius Horghidan</p>
     </footer>

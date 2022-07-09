@@ -5,47 +5,9 @@
     border-top: solid 1px rgb(120 40 193 / 32%);
     padding: 1rem 0;
 
-    &__container {
-        width: clamp(16rem, 90vw, 85rem);
-        margin-left: auto;
-        margin-right: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-
-        @include breakpoint(large) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-//LOGO
-    &__logo {
-        width: fit-content;
-        margin: 0 auto;
-        @include breakpoint(large) {
-            width: initial;
-            margin: 0;
-            align-self: center;
-        }
-      }
-//FOOTER MENU
-    &__ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        font-size: $font-med;
-        font-weight: $fw-secondary;
-        font-size: $font-med;
-        font-weight: $fw-secondary;
-        margin-top: 1rem;
-        @include breakpoint(large) {
-            margin: 0;
-        }
-    }
-
 //COPYRIGHT
     &__copyright {
-        width: fit-content;
-        margin: 0 auto;
-        margin-top: 1rem;
+        font-size: 0.875rem;
+        text-align: center;
     }
 }

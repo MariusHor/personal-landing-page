@@ -2,14 +2,20 @@
 
 .nav {
   padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 
   //LOGO
   &__logo {
     font-family: $ff-secondary;
     font-size: $font-2xlg;
     transition: ease-in-out 500ms;
+    z-index: 1000;
+    transform: translate(0, -50%);
     @include breakpoint(large) {
       font-size: $font-3xlg;
+      position: fixed;
     }
   }
 
@@ -19,6 +25,10 @@
 
   &__logo:hover .symbol {
     color: black;
+  }
+
+  .symbol {
+    font-weight: $fw-secondary;
   }
 
   .symbol--hide {
@@ -36,9 +46,10 @@
     background-color: transparent;
     border: 0;
     cursor: pointer;
+    z-index: 1000;
 
     @include breakpoint(large) {
-        display: none;
+      position: fixed;
     }
 
     &__hamburger:hover {
@@ -104,42 +115,50 @@
   //NAV RIGHT MENU
   &__right {
     display: flex;
+    align-items: center;
     gap: 1rem;
+    justify-content: flex-end;
+
+    @include breakpoint(large) {
+
+     }
   }
 
   &__menu, &__menu--light {
     display: flex;
     flex-direction: column;
-    gap: 1.4rem;
-    position: absolute;
+    gap: 2.5rem;
+    position: fixed;
     left: -100%;
-    top: 75px;
+    top: 0;
     text-align: center;
     font-size: 1.125rem;
     font-weight: $fw-secondary;
     width: 100%;
     transition: 0.3s;
     z-index: 100;
-    @include breakpoint(large) {
+   /* @include breakpoint(large) {
       font-size: $font-med;
       flex-direction: row;
       width: initial;
-      gap: 1rem;
+      gap: 2.5rem;
       position: initial;
       align-items: center;
     }
     @media screen and (max-height: 25.625rem) {
       overflow: scroll;
-    }
+    }*/
   }
   
   &__menu.active, &__menu--light.active {
     left: 0;
-    padding: 5rem 0;
+    font-size: 1.5rem;
+    padding: 10rem 0;
     height: 100vh;
     @include breakpoint(large) {
-      height: initial;
-      padding: 0;
+     /* height: initial;*/
+     font-size: 2rem;
+     padding: 15rem 0;
     }
   }
 
@@ -149,6 +168,20 @@
 
   &__menu--light.active {
     background-color: #fff;
+  }
+
+  &__menu--desktop {
+    display: none;
+    @include breakpoint(large) {
+      display: flex;
+      gap: 2.5rem;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: $fw-secondary;
+      width: 100%;
+      transition: 0.3s;
+     }
+
   }
 
   &__item {

@@ -23,9 +23,9 @@ body {
 
 .overflow-hidden {
   overflow: hidden;
-  @include breakpoint(large) {
+  /*@include breakpoint(large) {
     overflow: initial;
-}
+}*/
 }
 
 
