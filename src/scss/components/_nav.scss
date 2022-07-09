@@ -137,17 +137,10 @@
     width: 100%;
     transition: 0.3s;
     z-index: 100;
-   /* @include breakpoint(large) {
-      font-size: $font-med;
-      flex-direction: row;
-      width: initial;
-      gap: 2.5rem;
-      position: initial;
-      align-items: center;
-    }
-    @media screen and (max-height: 25.625rem) {
+
+    @media screen and (max-height: 500px) {
       overflow: scroll;
-    }*/
+    }
   }
   
   &__menu.active, &__menu--light.active {
