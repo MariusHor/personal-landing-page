@@ -2,8 +2,8 @@
 
 //SOCIALS
 .socials {
+    gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
-    width: 30%;
     font-size: 1.5rem;
     margin: 3rem 0 4rem;
     @include breakpoint(large) {
