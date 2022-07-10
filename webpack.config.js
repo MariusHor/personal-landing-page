@@ -36,6 +36,14 @@ module.exports = {
           'url-loader',
         ],
         },
+
+      {
+        test: /\.mp4/,
+        type: 'asset/resource',
+        generator: {
+          filename: 'video/[hash][ext][query]'
+          }
+      },
       
       {
         test: /\.s?css$/, //For turning the scss file into a css file
@@ -55,8 +63,10 @@ module.exports = {
       },
 
       {
-        test: /\.html$/i, //For HTML
-        loader: "html-loader",
+        test: /\.html$/,
+        use: {
+          loader: "html-loader",
+        }
       },
     ],
   },

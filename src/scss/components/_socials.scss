@@ -11,8 +11,23 @@
         font-size: 2rem;
     }
     &__hover {
-        transition: ease-out 0.3s;
+        transition: ease-out 0.1s;
     }
+    .socials a:hover &__hover{
+        position: relative;
+        bottom: 0.3rem;
+    }
+
+}
+
+.socials:hover > a {
+    transform: scale(0.95);
+    filter: blur(1.5px);
+}
+
+.socials a:hover {
+    transform: scale(1);
+    filter: blur(0px);
 }
 
 .footer .socials {
@@ -20,5 +35,5 @@
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    width: 100%;
+    width: fit-content
 }
