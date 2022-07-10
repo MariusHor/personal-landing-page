@@ -5,33 +5,28 @@
 
   //LOGO
 
-  .logo {
-    max-width: 175px;
+  &__logo {
     transition: ease-in-out 200ms;
   }
 
-  .logo:hover {
+  &__logo:hover {
     opacity: 0.8;
   }
 
-  .nav__menu .logo, .nav__menu--light .logo  {
-    max-width: 200px;
+  .logo-container {
+    max-width: 125px;
+
+    @media screen and (min-width: 500px) {
+      max-width: 150px;
+    }
+    @include breakpoint(large) {
+      max-width: 175px;
+    }
   }
 
-  .nav__menu .logo:hover, .nav__menu--light .logo:hover {
+  .nav__menu &__logo:hover, .nav__menu--light &__logo:hover {
     transform: scale(1.05);
     opacity: 1;
-  }
-
-  .symbol {
-    font-weight: $fw-secondary;
-  }
-
-  .symbol--hide {
-    display: none;
-    @include breakpoint(large) {
-      display: inline-block;
-  }
   }
 
   //HAMBURGER MENU
@@ -145,7 +140,7 @@
   
   &__menu.active, &__menu--light.active {
     left: 0;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     padding: 10rem 0;
     height: 100vh;
 
@@ -154,7 +149,7 @@
     }
     @include breakpoint(large) {
      /* height: initial;*/
-     font-size: 2rem;
+     font-size: 1.8rem;
      padding: 15rem 0;
     }
   }
