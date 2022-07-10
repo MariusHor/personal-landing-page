@@ -36,8 +36,7 @@
     transition: ease-in 300ms;
 
     @include breakpoint(large) {
-        padding-left: 1rem;
-        margin-right: 3rem;
+        margin: 0 1rem;
     }
 }
 
