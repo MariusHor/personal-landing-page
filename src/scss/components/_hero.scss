@@ -3,7 +3,7 @@
 .hero {
     .hero-container {
         padding: 5rem 0;
-        width: clamp(16rem, 70vw, 75rem);
+        width: clamp(16rem, 80vw, 75rem);
         margin-left: auto;
         margin-right: auto;
         display: grid;
@@ -38,12 +38,14 @@
 
     &__description {
         margin-bottom: 3rem;
-        font-size: 1rem;
+        font-weight: 500;
+        font-size: 1.1rem;
+        line-height: 1.7;
         @include breakpoint(medium) {
-            font-size: 1.1rem;
+            font-size: 1.2rem;
           }
         @include breakpoint(large) {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
           }
     }
 }
