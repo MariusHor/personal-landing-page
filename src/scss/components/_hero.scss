@@ -10,7 +10,7 @@
         gap: 1rem;
         @include breakpoint(large) {
             padding: 15rem 3rem 10rem;
-            width: clamp(16rem, 70vw, 75rem);
+            width: clamp(16rem, 80vw, 85rem);
             margin-left: auto;
             margin-right: auto;
             display: grid;
@@ -18,28 +18,36 @@
           }
     }
 
+    &__text {
+        max-width: 50rem;
+    }
+
     &__title {
-        font-size: 1.5rem;
+        font-size: 2.4rem;
+        line-height: 1;
+        margin-bottom: 1rem;
+        @include breakpoint(medium) {
+            font-size: 4rem;
+            margin-bottom: 0;
+          }
         @include breakpoint(large) {
-            font-size: 2.5rem;
+            font-size: 5rem;
+            margin-bottom: 0;
           }
     }
 
     &__description {
-        font-weight: $fw-secondary;
-        margin-bottom: 4rem;
-        font-size: 1.1rem;
-        position: relative;
-        left: -150%;
-        top: 0;
-        animation: anim 2s ease-in-out 100ms forwards;
+        margin-bottom: 3rem;
+        font-size: 1rem;
+        @include breakpoint(medium) {
+            font-size: 1.1rem;
+          }
+        @include breakpoint(large) {
+            font-size: 1.2rem;
+          }
     }
 }
 
-@keyframes anim {
-    100% {
-        left: 0
-    }
-}
+
 
 

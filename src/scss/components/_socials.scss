@@ -5,18 +5,13 @@
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
     font-size: 1.5rem;
-    margin-top: 1rem;
     @include breakpoint(large) {
-        align-items: center;
         font-size: 2rem;
     }
     &__hover {
         transition: ease-out 0.1s;
     }
-    .socials a:hover &__hover{
-        position: relative;
-        bottom: 0.3rem;
-    }
+
 
 }
 
@@ -30,10 +25,53 @@
     filter: blur(0px);
 }
 
-.footer .socials {
-    margin-top: 0;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    width: fit-content
+.main {
+    .socials {
+        position: fixed;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
 }
+
+.footer {
+    .socials {
+        margin-top: 0;
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        width: fit-content
+    }   
+}
+
+.light-theme {
+    .socials--bar {
+        display: none;
+        @include breakpoint(large) {
+          font-size: 1.7rem;
+          display: flex;
+          flex-direction: column;
+          background: white;
+          border-radius: 10px;
+          padding: 0.6rem;
+          gap: 1rem;
+        }
+      
+    }
+}
+  
+  .dark-theme {
+    .socials--bar {
+        display: none;
+        @include breakpoint(large) {
+          font-size: 1.7rem;
+          display: flex;
+          flex-direction: column;
+          background: rgb(0, 0, 0);
+          border-radius: 10px;
+          padding: 0.6rem;
+          gap: 1rem;
+        }
+      }
+  }

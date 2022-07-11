@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+//LOGO
+
+.logo {
+  max-width: 125px;
+  &__img {
+    transition: ease-in-out 200ms;
+  }
+  &__img:hover {
+    opacity: 0.8;
+  }
+  @include breakpoint(small) {
+    max-width: 150px;
+  }
+  @include breakpoint(large) {
+    max-width: 175px;
+  }
+}
+
+//NAV MENU LOGO HOVER
+
+.fullscreen-menu .logo__img:hover,
+.fullscreen-menu--light .logo__img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}

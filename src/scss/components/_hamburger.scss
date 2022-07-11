@@ -1,0 +1,70 @@
+@use "../abstracts" as *;
+
+//HAMBURGER MENU
+.hamburger {
+  cursor: pointer;
+  z-index: 1000;
+
+  @include breakpoint(large) {
+    position: fixed;
+    transform: translate(-100%, -50%);
+  }
+
+  &__hamburger:hover {
+    transition: $transition-one;
+  }
+
+  &__hamburger:focus {
+    outline: none;
+  }
+
+  &__bar,
+  &__bar--light {
+    display: block;
+    width: 25px;
+    height: 4px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+  }
+
+  &__bar {
+    background-color: #fff;
+  }
+
+  &__bar--light {
+    background-color: #000;
+  }
+}
+
+.hamburger:hover .hamburger__bar,
+.hamburger:hover .hamburger__bar {
+  background-color: $color-hover;
+}
+
+
+//BARS TRANSITION
+
+.hamburger.active .hamburger__bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger__bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.hamburger.active .hamburger__bar--light:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active .hamburger__bar--light:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .hamburger__bar--light:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
