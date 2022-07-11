@@ -3,7 +3,7 @@ const moonIcon = document.getElementById('moon-icon')
 const sunIcon = document.getElementById('sun-icon')
 const body = document.querySelector('body')
 const navMenu = document.querySelector('.fullscreen-menu')
-let bars = document.querySelectorAll('.bar')
+let bars = document.querySelectorAll('.hamburger__bar')
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme')
@@ -15,10 +15,10 @@ themeBtn.addEventListener('click', () => {
         navMenu.classList.remove('fullscreen-menu')
         navMenu.classList.toggle('fullscreen-menu--light')
         for (const bar of bars) {
-            bar.classList.remove('bar');
+            bar.classList.remove('hamburger__bar');
           }
         for (const bar of bars) {
-            bar.classList.add('bar--light');
+            bar.classList.add('hamburger__bar--light');
           }
     } else {
         document.body.classList.toggle('dark-theme')
@@ -27,10 +27,10 @@ themeBtn.addEventListener('click', () => {
         navMenu.classList.remove('fullscreen-menu--light')
         navMenu.classList.toggle('fullscreen-menu')
         for (const bar of bars) {
-            bar.classList.remove('bar--light');
+            bar.classList.remove('hamburger__bar--light');
           }
         for (const bar of bars) {
-            bar.classList.add('bar');
+            bar.classList.add('hamburger__bar');
           }
     }
 })
