@@ -1,1 +1,13 @@
 @use "../abstracts" as *;
+
+.light-theme {
+    .main {
+        background: #e7e7e7;
+    }
+}
+
+.dark-theme {
+    .main {
+        background: #1d1d1d;
+    }
+}

@@ -9,6 +9,11 @@
     justify-content: space-between;
   }
 
-  main {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+
+  .main {
     height: 100vh;
   }
