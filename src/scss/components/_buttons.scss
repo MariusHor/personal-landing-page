@@ -124,3 +124,33 @@
 .hide {
   display: none;
 }
+
+//SCROLLDOWN BUTTON
+
+.scrolldown-btn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  height: fit-content;
+  align-self: flex-end;
+  transition: 0.3s ease-in-out;
+  @include breakpoint(medium) {
+    font-size: 3rem;
+  }
+  @include breakpoint(large) {
+    margin-right: 2rem;
+  }
+}
+
+.scrolldown-btn:hover {
+  transform: scale(1.2);
+  color: $color-primary;
+}
+
+.bounce {
+  transform: scale(1.2);
+  color: $color-primary;
+  transition: 1s ease-in-out;
+}
+

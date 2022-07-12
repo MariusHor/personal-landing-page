@@ -3,13 +3,17 @@
 .hero {
     min-height: 100vh;
     @extend %center;
-    @media screen and (max-height: 425px) {
-      margin-top: 50px;
+    @media screen and (max-height: 325px) {
+      padding-top: 50px;
     }
     .hero-container {
-        width: clamp(16rem, 80vw, 75rem);
+        text-align: center;
+        width: clamp(16rem, 75vw, 70rem);
         margin-left: auto;
         margin-right: auto;
+        @include breakpoint(small) {
+          text-align: initial;
+        }
         @include breakpoint(large) {
             width: clamp(16rem, 80vw, 85rem);
           }
@@ -23,7 +27,6 @@
         font-size: 3.5rem;
         margin-bottom: 1rem;
         line-height: 1;
-        padding-right: 2rem;
         @include breakpoint(medium) {
             font-size: 4rem;
             margin-bottom: 0;
