@@ -5,7 +5,7 @@
   cursor: pointer;
   z-index: 1000;
 
-  @include breakpoint(large) {
+  @include breakpoint(medium) {
     position: fixed;
     transform: translate(-100%, -50%);
   }

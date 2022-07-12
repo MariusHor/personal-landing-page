@@ -108,8 +108,8 @@
   font-size: 1.4rem;
   transition: ease-in 300ms;
 
-  @include breakpoint(large) {
-    margin: 0 1rem;
+  @include breakpoint(medium) {
+    margin: 0 2rem;
   }
 }
 

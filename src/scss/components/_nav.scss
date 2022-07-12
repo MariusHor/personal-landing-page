@@ -6,7 +6,7 @@
   //NAV RIGHT MENU
   &__right {
     @extend %center;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   &__right div {
@@ -15,7 +15,7 @@
 
   &__menu {
     display: none;
-    @include breakpoint(large) {
+    @include breakpoint(medium) {
       display: flex;
       gap: 2rem;
       font-weight: $fw-secondary;
@@ -25,5 +25,26 @@
 
   &__item {
     transition: ease-in-out 0.3s;
+    position: relative;
+  }
+
+  &__item::after {
+    position: absolute;
+    content: '';
+    height: 8px;
+    background-color: $color-primary;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -60px;
+    width: 8px;
+    border-radius: 50%;
+    opacity: 0;
+    transition: 0.4s cubic-bezier(.57,.16,.73,.17);
+  }
+  
+  &__item:hover::after {
+    bottom: -10px;
+
+    opacity: 1;
   }
 }

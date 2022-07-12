@@ -51,14 +51,16 @@
 .light-theme {
     .socials--bar {
         display: none;
-        @include breakpoint(large) {
+        @include breakpoint(medium) {
           font-size: 1.7rem;
           display: flex;
           flex-direction: column;
           background: white;
-          border-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
           padding: 0.6rem;
           gap: 1rem;
+          filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.3));
         }
       
     }
@@ -67,14 +69,16 @@
   .dark-theme {
     .socials--bar {
         display: none;
-        @include breakpoint(large) {
+        @include breakpoint(medium) {
           font-size: 1.7rem;
           display: flex;
           flex-direction: column;
           background: rgb(0, 0, 0);
-          border-radius: 10px;
+          border-top-right-radius: 10px;
+          border-bottom-right-radius: 10px;
           padding: 0.6rem;
           gap: 1rem;
+          filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.3));
         }
       }
   }
