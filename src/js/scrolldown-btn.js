@@ -1,11 +1,24 @@
-const button = document.querySelector('.scrolldown-btn')
-const skillsSection = document.querySelector('.skills')
+let buttons = document.querySelectorAll('.scrolldown-btn')
+const about = document.querySelector('.about')
+const portfolio = document.querySelector('.portfolio')
+const contact = document.querySelector('.contact')
 const bounce = document
 
-button.addEventListener('click', () => {
-    skillsSection.scrollIntoView();
-})
+for (const button of buttons) {
+    button.addEventListener('click', () => {
+        if (button.closest('.header')) {
+            about.scrollIntoView();
+        } else if (button.closest('.about')) {
+            portfolio.scrollIntoView();
+        } else if (button.closest('.portfolio')) {
+            contact.scrollIntoView();
+        }
+    })
+}
+
 
 setInterval(function() {
-    button.classList.toggle('bounce');
+    for (const button of buttons) {
+        button.classList.toggle('bounce');
+    }
   }, 3000);

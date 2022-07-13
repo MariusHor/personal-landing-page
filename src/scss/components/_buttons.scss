@@ -2,26 +2,25 @@
 
 //CTA BUTTON
 
-.cta-button,
-.cta-button::after {
-  width: 140px;
-  height: 40px;
+.hero__btn,
+.hero__btn::after {
+  font-size: 1rem;
+  padding: 0.7rem 1.8rem;
   font-weight: $fw-secondary;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(45deg, transparent 5%, hsl(262, 75%, 63%) 5%);
+  background: linear-gradient(45deg, transparent 5%, #7510F7 5%);
   border: 0;
-  color: #fff;
+  color: #fff!important;
   filter: drop-shadow(1px 5px 10px rgba(1, 1, 1, 0.6));
   position: relative;
 
   @include breakpoint(large) {
-    width: 160px;
-    height: 50px;
+    padding: 0.875rem 2.1rem;
   }
 }
 
-.cta-button::after {
+.hero__btn::after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -41,13 +40,13 @@
     transparent 3%,
     #00e6f6 3%,
     #00e6f6 5%,
-    hsl(262, 75%, 63%) 5%
+    #7510F7 5%
   );
   text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
   clip-path: var(--slice-0);
 }
 
-.cta-button:hover::after {
+.hero__btn:hover::after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
@@ -133,25 +132,32 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 2rem;
+  font-size: 1.5rem;
   height: fit-content;
   align-self: flex-end;
   transition: 0.3s ease-in-out;
   padding-bottom: 1rem;
+  width: fit-content;
+  justify-self: center;
   @include breakpoint(large) {
-    font-size: 3rem;
+    font-size: 2em;
   }
 }
 
+
+
 .scrolldown-btn:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   color: $color-primary;
+}
+
+.scrolldown-btn--contrast:hover {
+  color: #000;
 }
 
 .bounce {
   position: relative;
   bottom: -10px;
-  color: $color-primary;
-  transition: 1s ease-in-out;
+  transition: 0.2s cubic-bezier(.17,.16,.13,.17);
 }
 

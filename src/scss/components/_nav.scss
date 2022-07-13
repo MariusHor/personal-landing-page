@@ -15,7 +15,7 @@
 
   &__menu {
     display: none;
-    @include breakpoint(medium) {
+    @include breakpoint(large) {
       display: flex;
       gap: 2rem;
       font-weight: $fw-secondary;

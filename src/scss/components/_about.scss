@@ -1,0 +1,9 @@
+@use "../abstracts" as *;
+
+.about {
+    height: 100vh;
+    background: $color-primary;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}

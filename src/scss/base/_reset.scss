@@ -4,6 +4,7 @@
 //with box sizes. We also reset both margin and padding to 0.
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *, *::before, *::after {

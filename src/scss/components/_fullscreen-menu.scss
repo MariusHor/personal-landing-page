@@ -18,8 +18,7 @@
   transition: ease-in-out 0.3s;
   z-index: 100;
 
-  @media screen and (max-height: 500px) {
-    overflow: scroll;
+  @media screen and (max-height: 32em) {
     gap: 1rem;
   }
 
