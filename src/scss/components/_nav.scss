@@ -1,7 +1,8 @@
 @use "../abstracts" as *;
 
 .nav {
-  padding: 1rem 0;
+  max-height: 5rem;
+  display: flex;
 
   //NAV RIGHT MENU
   &__right {

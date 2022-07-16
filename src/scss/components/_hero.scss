@@ -1,11 +1,14 @@
 @use "../abstracts" as *;
 
 .hero {
-    align-self: center;
+    height: 100%;
+    display: grid;
+    align-items: center;
     @media screen and (max-height: 325px) {
       padding-top: 10px;
     }
     .hero-container {
+        display: grid;
         text-align: center;
         width: clamp(16rem, 75vw, 70rem);
         margin-left: auto;
@@ -15,35 +18,40 @@
         }
         @include breakpoint(large) {
             width: clamp(16rem, 80vw, 85rem);
-          }
+        }
     }
 
     &__text {
         max-width: 50rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include breakpoint(small) {
+          display: grid;
+        }
     }
 
     &__title {
+        opacity: 0;
+        transform: translateY(200%);
         font-size: 3rem;
         margin-bottom: 1rem;
         line-height: 1;
-        @include breakpoint(medium) {
-            margin-bottom: 0;
-            padding-right: 0;
-          }
-        @include breakpoint(large) {
-            font-size: 5rem;
-            margin-bottom: 0;
-            padding-right: 0;
-          }
+        @include breakpoint(small) {
+          margin-bottom: 0;
+        }
     }
 
     &__description {
-
+        opacity: 0;
+        transform: translateY(200%);
         margin-bottom: 3rem;
         font-weight: 500;
         font-size: 1.05rem;
+        line-height: 1.2;
         @include breakpoint(medium) {
             font-size: 1.15rem;
+            margin-bottom: 2rem;
           }
         @include breakpoint(large) {
             font-size: 1.2rem;
@@ -62,6 +70,12 @@
     color: #D5D5D5;
   }
 } 
+
+.active {
+  transform: translateY(0%);
+  transition: 1s ease-in;
+  opacity: 1 !important;
+}
 
 
 

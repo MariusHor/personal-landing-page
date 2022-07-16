@@ -2,10 +2,16 @@
 
 //CTA BUTTON
 
+.hero__btn {
+  opacity: 0;
+}
+
 .hero__btn,
 .hero__btn::after {
+  width: 8rem;
+  text-align: center;
   font-size: 1rem;
-  padding: 0.7rem 1.8rem;
+  padding: 0.6rem 0;
   font-weight: $fw-secondary;
   border-radius: 10px;
   cursor: pointer;
@@ -16,9 +22,11 @@
   position: relative;
 
   @include breakpoint(large) {
-    padding: 0.875rem 2.1rem;
+    padding: 0.7rem 0;
+    width: 9rem;
   }
 }
+
 
 .hero__btn::after {
   --slice-0: inset(50% 50% 50% 50%);
@@ -132,7 +140,7 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   height: fit-content;
   align-self: end;
   transition: 0.3s ease-in-out;
@@ -140,7 +148,7 @@
   width: fit-content;
   justify-self: center;
   @include breakpoint(large) {
-    font-size: 2em;
+    font-size: 1.5rem;
   }
 }
 
