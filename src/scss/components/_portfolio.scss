@@ -2,7 +2,6 @@
 
 .portfolio {
     min-height: 100vh;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    display: grid;
+    padding-top: 2rem;
 }

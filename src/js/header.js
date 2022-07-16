@@ -12,12 +12,19 @@ function triangleMove(e) {
     });
 }
 
-
+let buttons = document.querySelectorAll('.scrolldown-btn')
+let socialBar = document.querySelectorAll('.socials--bar')
 const hero = document.querySelector('.hero__text').children;
 const heroLen = hero.length;
 let index = 0;
 
 function animate() {
+    for (const button of buttons) {
+        button.classList.add('active');
+    }
+    for (const social of socialBar) {
+        social.classList.add('active');
+    }
     hero[index].classList.add('active')
     if (index == heroLen-1) {
         index=0
@@ -25,7 +32,7 @@ function animate() {
         index++;
     }
 
-    setTimeout(animate, 1000)
+    setTimeout(animate, 900)
 
 }
 

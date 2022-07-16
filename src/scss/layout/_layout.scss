@@ -1,20 +1,23 @@
 @use "../abstracts" as *;
 
-  .container {
+  .m-container {
     width: clamp(16rem, 90vw, 90rem);
     margin-left: auto;
     margin-right: auto;
-    @extend %center;
-    gap: 4rem;
-    justify-content: space-between;
+  }
+
+  .s-container {
+    width: clamp(16rem, 75vw, 70rem);
+    margin-left: auto;
+    margin-right: auto;
+    @include breakpoint(large) {
+      width: clamp(16rem, 80vw, 85rem);
+  }
   }
 
   .header {
-    position: relative;
-    &__container {
-      display: grid;
-      min-height: 100vh;
-    }
+    display: grid;
+    min-height: 100vh;
     .object {
       display: none;
       @include breakpoint(large) {

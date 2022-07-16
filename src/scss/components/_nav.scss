@@ -3,6 +3,11 @@
 .nav {
   max-height: 5rem;
   display: flex;
+  &__container {
+    @extend %center;
+    gap: 4rem;
+    justify-content: space-between;
+  }
 
   //NAV RIGHT MENU
   &__right {
