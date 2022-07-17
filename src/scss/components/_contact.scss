@@ -27,7 +27,16 @@
   color: #f3f4f6;
 }
 
-input[type=text], input[type=email], textarea {
+.wide {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+textarea {
+  height: 100px;
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
