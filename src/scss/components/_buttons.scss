@@ -2,12 +2,12 @@
 
 //CTA BUTTON
 
-.hero__btn {
+.btn {
   opacity: 0;
 }
 
-.hero__btn,
-.hero__btn::after {
+.btn,
+.btn::after {
   width: 8rem;
   text-align: center;
   font-size: 1rem;
@@ -27,7 +27,7 @@
 }
 
 
-.hero__btn::after {
+.btn::after {
   --slice-0: inset(50% 50% 50% 50%);
   --slice-1: inset(80% -6px 0 0);
   --slice-2: inset(50% -6px 30% 0);
@@ -35,7 +35,7 @@
   --slice-4: inset(40% -6px 43% 0);
   --slice-5: inset(80% -6px 5% 0);
 
-  content: "AVAILABLE NOW";
+  content: ' ';
   display: block;
   position: absolute;
   top: 0;
@@ -53,7 +53,7 @@
   clip-path: var(--slice-0);
 }
 
-.hero__btn:hover::after {
+.btn:hover::after {
   animation: 1s glitch;
   animation-timing-function: steps(2, end);
 }
@@ -103,6 +103,13 @@
     clip-path: var(--slice-1);
     transform: translate(0);
   }
+}
+
+.btn--contact {
+  opacity: 1;
+  background: white;
+  color: #000 !important;
+  justify-self: center;
 }
 
 //THEME SWITCH
