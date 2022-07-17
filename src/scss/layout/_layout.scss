@@ -23,12 +23,12 @@
       @include breakpoint(large) {
         display: initial;
         position: absolute;
-        top: 35%;
-        right: 10%;
+        top: 25%;
+        right: 5%;
         z-index: -1;
         opacity: 0.6;
-        width:300px;
-        height:300px;
+        width:400px;
+        height:400px;
         background: linear-gradient(to left, #7510F7 1%, #000000 100%);
         clip-path:polygon(0% 100%,50% 0%,100% 100%,0% 100%,10% 93%,90% 93%,50% 13%,10% 93%);
       }
@@ -38,8 +38,42 @@
         right: 15%;
       }
     }
+    .rotate {
+      position: absolute;
+      left: 0; 
+      right: 0; 
+      top: 70%;
+      margin-left: auto; 
+      margin-right: auto;
+      z-index: -1;
+      max-width: 5rem;
+      animation: rotate 20s linear infinite;
+      opacity: 0.5;
+
+      @include breakpoint(large) {
+        display: none;
+      }
+    }
+    .ltr {
+      mix-blend-mode: luminosity;
+      justify-self: center;
+      animation: rotate 20s infinite;
+      position: absolute;
+      top: 80%;
+      z-index: -1;
+      width: 8rem;
+    }
   }
 
   .light-theme .object {
     background: linear-gradient(to left, #7510F7 1%, #ffffff 100%);
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
   }
