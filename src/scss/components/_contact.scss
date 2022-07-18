@@ -3,6 +3,7 @@
 .contact {
     background: $color-primary;
     padding: 2rem 0;
+    height: 100vh;
     @include breakpoint(medium) {
       padding: 4rem 0;
     }
