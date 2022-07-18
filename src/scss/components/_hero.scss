@@ -7,8 +7,9 @@
     @media screen and (max-height: 325px) {
       padding-top: 10px;
     }
-    .hero-container {
+    &__container {
         display: grid;
+        position: relative;
     }
 
     &__text {

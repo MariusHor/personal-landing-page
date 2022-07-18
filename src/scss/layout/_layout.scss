@@ -18,13 +18,14 @@
   .header {
     display: grid;
     min-height: 100vh;
+    position: relative;
     .object {
       display: none;
       @include breakpoint(large) {
         display: initial;
         position: absolute;
-        top: 25%;
-        right: 5%;
+        bottom: -70%;
+        right: -5%;
         z-index: -1;
         opacity: 0.6;
         width:400px;
@@ -35,7 +36,7 @@
 
       @include breakpoint(xxlarge) {
         opacity: 0.8;
-        right: 15%;
+        right: 5%;
       }
     }
     .rotate {

@@ -36,9 +36,9 @@
 
 .contact__text {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     @include breakpoint(large) {
-      margin-bottom: 6rem;
+      margin-bottom: 5rem;
     }
 }
 
