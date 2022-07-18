@@ -1,9 +1,14 @@
 @use "../abstracts" as *;
 
 .contact {
-    min-height: 100vh;
     background: $color-primary;
     padding: 2rem 0;
+    @include breakpoint(medium) {
+      padding: 4rem 0;
+    }
+    @include breakpoint(large) {
+      padding: 6rem 0;
+    }
 }
 
 .form-wrapper {
@@ -15,7 +20,6 @@
 .contact__title {
   font-size: 3rem;
   line-height: 1;
-  margin-bottom: 1rem;
   @include breakpoint(medium) {
     font-size: 3.25rem;
   }
