@@ -58,6 +58,7 @@
 } 
 
 .dark-theme {
+  transition: ease-in-out 0.5s;
   .hero__description {
     color: #D5D5D5;
   }
@@ -65,7 +66,7 @@
 
 .active {
   transform: translateY(0%);
-  transition: 900ms ease-in;
+  transition: 400ms ease-in;
   opacity: 1 !important;
 }
 

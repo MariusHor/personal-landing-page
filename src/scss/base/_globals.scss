@@ -18,6 +18,7 @@ body {
 .light-theme {
   background: $color-bg-light;
   color: $color-font-light; 
+  transition: ease-in-out 0.5s;
 }
 
 
