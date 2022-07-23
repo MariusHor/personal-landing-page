@@ -32,6 +32,7 @@
         line-height: 1;
         @include breakpoint(small) {
           margin-bottom: 0;
+          font-size: 4rem;
         }
     }
 
@@ -42,11 +43,11 @@
         font-weight: 500;
         font-size: 1.1rem;
         @include breakpoint(medium) {
-            font-size: 1.15rem;
+            font-size: 1.25rem;
             margin-bottom: 2rem;
           }
         @include breakpoint(large) {
-            font-size: 1.2rem;
+            font-size: 1.35rem;
         }
     }
 }

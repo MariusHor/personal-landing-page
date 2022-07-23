@@ -5,10 +5,12 @@
     &__skills {
         display: grid;
         margin-top: 3rem;
+        margin-bottom: 3rem;
         height: 900px;
         @include breakpoint(large) {
             height: 600px;
             margin-top: 5rem;
+            margin-bottom: 5rem;
             grid-template-columns: repeat(3, 1fr);
             -webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
             clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
@@ -30,19 +32,12 @@
     }
 
     &__skill:hover .skill__cover {
-        opacity: 0.7;
-    }
-
-    .about__skills:hover > .about__skill {
-        opacity: 0;
+        opacity: 0.75;
     }
 
     .about__skills .about__skill:hover {
         opacity: 1;
-        @media screen and (max-width: 48em) {
-            -webkit-clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
-            clip-path: polygon(0 0, 100% 20%, 100% 80%, 0 100%);
-        }
+        transform: scale(1.1);
     }
 
     .frontend {
@@ -72,19 +67,61 @@
         font-family: $ff-secondary;
         font-size: 1.2rem;
         text-transform: uppercase;
-        transition: 0.3s ease-in-out;
+        transition: 0.3s ease-in-out; 
         @include breakpoint(large) {
             font-size: 1.4rem;
         }
     }
 
+    .skill__text::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 0;
+        width: 0;
+        background: $color-primary;
+        z-index: -1;
+        border-radius: 10px;
+        transition: 0.3s ease-in-out; 
+    }
+
+    .about__skill:hover .skill__text::before {
+        height: 1px;
+        width: 100%;
+    }
+
     &__skill:hover .skill__text {
         top: 70%;
-        background: rgba(123, 29, 230, 0.4);
+        /*background: rgba(123, 29, 230, 0.4);
         border-radius: 0.3rem;
-        padding: 0.5rem;
+        padding: 0.5rem;*/
     }
 }
 
+.about__list {
+    line-height: 2;
+    font-size: 1rem;
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 5rem;
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    color: rgba(0,0,0,.7);
+    transition: 0.4s ease-in-out;
+    @include breakpoint(medium) {
+        font-size: 1.2rem;
+    }
+}
 
+.about__list:hover {
+    filter: drop-shadow(20px 20px 1px rgba(255, 255, 255, 0.2));
+}
 
+.fa-check {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: $color-primary;
+    margin-right: 1rem;
+}
