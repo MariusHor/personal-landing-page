@@ -1,7 +1,6 @@
 @use "../abstracts" as *;
 
-.contact {
-    background: $color-primary;
+.section {
     padding: 2rem 0;
     @include breakpoint(medium) {
       padding: 4rem 0;
@@ -9,6 +8,10 @@
     @include breakpoint(large) {
       padding: 6rem 0;
     }
+}
+
+.contact {
+  background: $color-primary;
 }
 
 .form-wrapper {
@@ -21,7 +24,8 @@ form > div {
   margin-bottom: 2rem;
 }
 
-.contact__title {
+.section__title {
+  text-align: center;
   font-size: 3rem;
   line-height: 1;
   @include breakpoint(medium) {
@@ -32,7 +36,7 @@ form > div {
   }
 }
 
-.contact__subtitle {
+.section__subtitle {
   font-size: 1.15rem;
   @include breakpoint(medium) {
     font-size: 1.3rem;
@@ -50,7 +54,7 @@ form > div {
     }
 }
 
-.light-theme .contact__text {
+.accent-bkg-text {
   color: #f3f4f6;
 }
 
@@ -99,6 +103,7 @@ label {
 
 input[type=submit] {
   background-color: #04AA6D;
+  font-size: 1.1rem;
   color: white;
   padding: 12px 20px;
   border: none;
@@ -110,8 +115,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
-  transform: scale(1.05);
+  background-color: #357a39;
 }
 
 .contact__form {

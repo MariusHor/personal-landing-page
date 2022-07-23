@@ -20,6 +20,7 @@
   color: #fff!important;
   filter: drop-shadow(1px 5px 10px rgba(1, 1, 1, 0.6));
   @include breakpoint(large) {
+    font-size: 1.1rem;
     padding: 0.7rem 0;
     width: 9rem;
   }

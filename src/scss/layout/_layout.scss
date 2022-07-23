@@ -32,7 +32,6 @@
         height:400px;
         background: linear-gradient(to left, #7510F7 1%, #000000 100%);
         clip-path:polygon(0% 100%,50% 0%,100% 100%,0% 100%,10% 93%,90% 93%,50% 13%,10% 93%);
-        transition: ease-in-out 0.5s;
       }
 
       @include breakpoint(xxlarge) {
@@ -69,7 +68,6 @@
 
   .light-theme .object {
     background: linear-gradient(to left, #7510F7 1%, #ffffff 100%);
-    transition: ease-in-out 0.5s;
   }
 
   @keyframes rotate {
