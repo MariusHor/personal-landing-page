@@ -1,5 +1,11 @@
 @use "../abstracts" as *;
 
+  .l-container {
+    width: clamp(16rem, 90vw, 100rem);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .m-container {
     width: clamp(16rem, 90vw, 90rem);
     margin-left: auto;

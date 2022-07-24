@@ -50,7 +50,7 @@
     }
 
     .ob {
-      background: $color-primary;
+      background: linear-gradient(6.03deg,$color-primary .5%,rgba(218,205,255,0) 46.89%),#13003f;
       border-top-left-radius: 80px 80px;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
@@ -61,7 +61,7 @@
     }
 
     .ob:hover {
-      background: $color-primary;
+      background: linear-gradient(6.03deg,$color-primary .5%,rgba(218,205,255,0) 46.89%),#13003f;
       border-top-left-radius: 80px 80px;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;

@@ -13,6 +13,10 @@ body {
   .accent {
     color: $color-primary;
   }
+  .accent-bold {
+    color: $color-primary;
+    font-weight: 600;
+  }
 }
 
 .light-theme {
