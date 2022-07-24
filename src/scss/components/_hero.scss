@@ -42,7 +42,7 @@
         max-width: 225px;
       }
       @include breakpoint(medium) {
-        max-width: 275px;
+        max-width: 250px;
       }
       @include breakpoint(large) {
         max-width: initial;
@@ -99,9 +99,9 @@
         transform: translateY(200%);
         margin-bottom: 2rem;
         font-weight: 500;
-        font-size: 1.1rem;
+        font-size: 1rem;
         @include breakpoint(large) {
-            font-size: 1.35rem;
+            font-size: 1.25rem;
         }
     }
 }
