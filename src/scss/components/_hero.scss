@@ -2,12 +2,8 @@
 
 .hero {
     height: 100%;
-    padding-top: 1rem;
     display: grid;
     align-items: center;
-    @media screen and (max-height: 325px) {
-      padding-top: 10px;
-    }
     &__container {
         display: grid;
         gap: 3rem;
@@ -59,7 +55,7 @@
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
       transition: 0.8s ease-in-out;
-      @include breakpoint(medium) {
+      @include breakpoint(large) {
         background: none;
       }
     }
@@ -72,7 +68,9 @@
     }
 
     .ob:hover  &__author-img {
-      transform: scale(0.85);
+      @include breakpoint(large) {
+        transform: scale(0.85);
+      }
     }
 
     &__author-img {
@@ -87,7 +85,10 @@
         font-size: 3rem;
         margin-bottom: 0.5rem;
         line-height: 1;
-        @include breakpoint(small) {
+        @include breakpoint(medium) {
+          font-size: 3.5rem;
+        }
+        @include breakpoint(large) {
           margin-bottom: 0;
           font-size: 4rem;
         }
@@ -99,9 +100,6 @@
         margin-bottom: 2rem;
         font-weight: 500;
         font-size: 1.1rem;
-        @include breakpoint(medium) {
-            font-size: 1.25rem;
-          }
         @include breakpoint(large) {
             font-size: 1.35rem;
         }
