@@ -4,9 +4,9 @@ import './scss/main.scss';
 import './js/index.js';
 
 import './img/logo.svg'
-import './img/profile.jpeg'
+import './img/profile.png'
 import './img/backend.jpg'
-import './img/coder.png'
+import './img/hero.jpg'
 import './img/triangle.png'
 import './img/design.jpg'
 import './img/frontend.jpg'

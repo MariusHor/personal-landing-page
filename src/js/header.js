@@ -12,6 +12,7 @@ function triangleMove(e) {
     });
 }
 
+
 let buttons = document.querySelectorAll('.scrolldown-btn')
 let socialBar = document.querySelectorAll('.socials--bar')
 const hero = document.querySelector('.hero__text').children;

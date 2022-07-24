@@ -2,6 +2,7 @@
 
 .hero {
     height: 100%;
+    padding-top: 1rem;
     display: grid;
     align-items: center;
     @media screen and (max-height: 325px) {
@@ -9,7 +10,19 @@
     }
     &__container {
         display: grid;
-        position: relative;
+        gap: 3rem;
+        @include breakpoint(large) {
+          grid-template-columns: 2fr 1fr;
+          gap: 2rem;
+        }
+        @media screen and (min-height: 800px) and (max-width: 1000px) {
+          gap: 6rem;
+        }
+    }
+
+    &__left {
+      height: fit-content;
+      align-self: center;
     }
 
     &__text {
@@ -22,6 +35,50 @@
           display: grid;
           text-align: initial;
         }
+    }
+
+    &__picture {
+      align-self: center;
+      max-width: 150px;
+      margin: 0 auto;
+
+      @include breakpoint(small) {
+        max-width: 225px;
+      }
+      @include breakpoint(medium) {
+        max-width: 275px;
+      }
+      @include breakpoint(large) {
+        max-width: initial;
+      }
+    }
+
+    .ob {
+      background: $color-primary;
+      border-top-left-radius: 80px 80px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      transition: 0.8s ease-in-out;
+      @include breakpoint(medium) {
+        background: none;
+      }
+    }
+
+    .ob:hover {
+      background: $color-primary;
+      border-top-left-radius: 80px 80px;
+      border-bottom-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+    }
+
+    .ob:hover  &__author-img {
+      transform: scale(0.85);
+    }
+
+    &__author-img {
+      border-radius: 50%;
+      position: relative;
+      transition: .7s ease-in-out;
     }
 
     &__title {
@@ -39,12 +96,11 @@
     &__description {
         opacity: 0;
         transform: translateY(200%);
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
         font-weight: 500;
         font-size: 1.1rem;
         @include breakpoint(medium) {
             font-size: 1.25rem;
-            margin-bottom: 2rem;
           }
         @include breakpoint(large) {
             font-size: 1.35rem;
@@ -70,7 +126,6 @@
   transition: 400ms ease-in;
   opacity: 1 !important;
 }
-
 
 
 
