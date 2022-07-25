@@ -1,121 +1,100 @@
 @use "../abstracts" as *;
 
+.tools {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 .about {
-    background: linear-gradient(6.03deg,#13003f .5%,rgba(218,205,255,0) 46.89%),$color-primary;
-    border-radius: 1rem;
-    transition: 0.6s ease-in-out;
-    margin-bottom: 5rem;
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     &__skills {
-        justify-content: center;
         display: grid;
-        margin-top: 3rem;
-        border-radius: 1rem;
-        overflow: hidden;
+        align-self: start;
         gap: 1rem;
         @include breakpoint(large) {
             gap: 0;
-            margin-top: 5rem;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
         }
     }
 
     &__skill {
-        display: grid;
-        grid-template-rows: 1fr 3fr 2fr;
-        gap: 1rem;
-        background: #fff;
-        transition: 0.3s ease-in-out;
-        padding: 2rem;
+        padding: 1rem;
         max-width: 30rem;
+        height: fit-content;
+        transition: 0.5s ease-in-out;
+        border-radius: 2rem;
     }
 
     .skill__icon {
         align-self: center;
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: center;
         color: $color-primary;
+        margin: 0 auto;
+        margin-top: 1rem;
+        @include breakpoint(large) {
+            font-size: 2rem;
+        }
     }
 
-
-    .about__skills:hover > .about__skill {
-        transform: scale(0.95);
-        filter: blur(1.5px);
-        border-radius: 1rem;
-        overflow: hidden;
-    }
-    
-    .about__skills .about__skill:hover {
-        filter: blur(0px);
-
-    }
 
     .skill__title {
-        color: #000;
+        color: $color-primary;
         position: relative;
         text-align: center;
         font-family: $ff-secondary;
-        font-size: 1.2rem;
+        font-size: 2rem;
         text-transform: uppercase;
         transition: 0.6s ease-in-out; 
         align-self: center;
         justify-self: center;
         width: fit-content;
         @include breakpoint(large) {
-            font-size: 1.4rem;
+            font-size: 3rem;
         }
     }
 
     .skill__text {
-        color: rgba(0,0,0,0.7);
-        text-align: center;
+        color: #687081;
         font-family: $ff-primary;
-        font-size: 1rem;
+        font-size: 0.925rem;
         transition: 0.3s ease-in-out; 
         @include breakpoint(large) {
+            font-size: 1rem;
         }
     }
 
-    .skill__title::before {
-        content: '';
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 0;
-        width: 0;
-        background: $color-primary;
-        z-index: -1;
-        border-radius: 10px;
-        transition: 0.3s ease-in-out; 
-    }
-
-    .about__skill:hover .skill__title::before {
-        height: 1px;
-        width: 100%;
-    }
-
-    &__skill:hover .skill__title {
-        bottom: 10%;
-        transition: 0.6s ease-in-out;
-        /*background: rgba(123, 29, 230, 0.4);
-        border-radius: 0.3rem;
-        padding: 0.5rem;*/
+    .design {
+        justify-self: end;
     }
 }
 
-.about:hover {
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 58px, rgba(0, 0, 0, 0.32) 20px 20px 40px;
+.tools__container {
+    display: grid;
+    column-gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    @include breakpoint(medium) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @include breakpoint(large) {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    
 }
 
-.about__list {
-    font-size: 1rem;
+.tools__item {
+    max-width: 10rem;
     margin: 0 auto;
     width: fit-content;
-    margin-top: 5rem;
     background: white;
     border-radius: 10px;
     padding: 2rem;
-    color: rgba(0,0,0,.7);
     transition: 0.4s ease-in-out;
+    height: fit-content;
 }
 
 .about__list:hover {

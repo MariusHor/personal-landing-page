@@ -5,8 +5,8 @@ function triangleMove(e) {
     object.forEach(function(move) {
 
         let moving_value = move.getAttribute('data-value');
-        const x = e.clientX * moving_value / 150;
-        const y = e.clientY * moving_value / 150;
+        const x = e.clientX * moving_value / 250;
+        const y = e.clientY * moving_value / 250;
 
         move.style.transform = "translateX(" + x + "px) translateY(" + y + "px)";
     });

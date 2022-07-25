@@ -39,29 +39,34 @@
       margin: 0 auto;
 
       @include breakpoint(small) {
-        max-width: 225px;
+        max-width: 200px;
       }
       @include breakpoint(medium) {
-        max-width: 250px;
+        max-width: 225px;
       }
       @include breakpoint(large) {
-        max-width: initial;
+        max-width: 300px;
       }
     }
 
     .ob {
-      background: linear-gradient(6.03deg,$color-primary .5%,rgba(218,205,255,0) 46.89%),#13003f;
+      background: #B993D6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
       border-top-left-radius: 80px 80px;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
       transition: 0.8s ease-in-out;
       @include breakpoint(large) {
-        background: none;
       }
     }
 
     .ob:hover {
-      background: linear-gradient(6.03deg,$color-primary .5%,rgba(218,205,255,0) 46.89%),#13003f;
+      background: #B993D6;  /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+      
       border-top-left-radius: 80px 80px;
       border-bottom-left-radius: 50%;
       border-bottom-right-radius: 50%;
