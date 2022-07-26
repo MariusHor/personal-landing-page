@@ -7,7 +7,7 @@
 
   @include breakpoint(large) {
     position: fixed;
-    transform: translate(-100%, -50%);
+    transform: translate(-100%, 0);
   }
 
   &__hamburger:hover {
@@ -21,11 +21,15 @@
   &__bar,
   &__bar--light {
     display: block;
-    width: 25px;
-    height: 4px;
-    margin: 5px auto;
+    width: 30px;
+    height: 3px;
+    margin: 8px auto;
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
+    @include breakpoint(large) {
+      width: 35px;
+      height: 4px;
+    }
   }
 
   &__bar {

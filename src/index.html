@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;800&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/d73036c961.js" crossorigin="anonymous"></script>
 </head>
 
@@ -24,32 +24,23 @@
     <nav class="nav">
       <div class="nav__container m-container">
         <a class="logo" href="#"><img class="logo__img" src="./img/logo.svg" alt="website logo"
-            aria-hidden="true" /></a>
+            aria-hidden="true" />
+        </a>
+        <button class="theme-switch">
+          <i id="moon-icon" class="fa-solid fa-lightbulb"></i>
+          <i id="sun-icon" class="fa-regular fa-lightbulb hide"></i>
+          <!--<i id='moon-icon' class="fa-solid fa-moon hide"></i>
+              <i id='sun-icon' class="fa-solid fa-sun"></i> -->
+        </button>
+        
         <div class="nav__right">
-          <ul class="nav__menu">
-            <li><a class="nav__item" href="#">About</a></li>
-            <li><a class="nav__item" href="#">Portfolio</a></li>
-            <li><a class="nav__item" href="#">Contact</a></li>
-          </ul>
-          <button class="theme-switch">
-            <i id="moon-icon" class="fa-solid fa-lightbulb"></i>
-            <i id="sun-icon" class="fa-regular fa-lightbulb hide"></i>
-            <!--<i id='moon-icon' class="fa-solid fa-moon hide"></i>
-                <i id='sun-icon' class="fa-solid fa-sun"></i> -->
-          </button>
-          <div>
             <div class="hamburger">
               <span class="hamburger__bar--light"></span>
               <span class="hamburger__bar--light"></span>
               <span class="hamburger__bar--light"></span>
             </div>
-          </div>
         </div>
         <ul class="fullscreen-menu--light">
-          <li>
-            <a class="logo" href="#"><img class="logo__img" src="./img/logo.svg" alt="website logo"
-                aria-hidden="true" /></a>
-          </li>
           <li><a class="fullscreen-menu__item" href="#">About</a></li>
           <li><a class="fullscreen-menu__item" href="#">Portfolio</a></li>
           <li><a class="fullscreen-menu__item" href="#">Contact</a></li>
@@ -98,13 +89,12 @@
   <!--MAIN-->
   <main class="main">
     <section class="about">
-      <div class="s-container section">
-        <h2 class="section__title">What I do?</h2>
+      <div class="m-container section">
         <div class="about__skills">
           <div class="about__skill frontend">
             <p class="skill__title">Front-end Dev</p>
             <p class="skill__text">
-              I <span class="accent-bold">build </span>high performing websites from scratch, writing clean and structured code, while focusing on interactive layouts, responsive
+              I build high performing websites from scratch, writing clean and structured code, while focusing on interactive layouts, responsive
               on any device size.
             </p>
             <i class="fa-solid fa-code skill__icon"></i>
@@ -112,31 +102,10 @@
           <div class="about__skill design">
             <p class="skill__title">Web Design</p>
             <p class="skill__text">
-              I <span class="accent-bold">design </span>pleasant looking brand logos, banners and, if required, I can also work on website layouts.
+              I design pleasant looking brand logos, banners and, if required, I can also work on website layouts.
             </p>
             <i class="fa-solid fa-paintbrush skill__icon"></i>
           </div>
-        </div>
-      </div>
-    </section>
-    <section class="tools">
-      <div class="s-container section">
-        <h3 class="section__title">What tools I use?</h2>
-        <div class="tools__container">
-          <div class="tools__item">
-            <img src="./img/js.png" alt="">
-          </div>
-          <div class="tools__item">
-            <img src="./img/html.png" alt="">
-          </div>
-          <div class="tools__item">
-            <img src="./img/css.png" alt="">
-          </div>
-          <div class="tools__item"></div>
-          <div class="tools__item"></div>
-          <div class="tools__item"></div>
-          <div class="tools__item"></div>
-          <div class="tools__item"></div>
         </div>
       </div>
     </section>
