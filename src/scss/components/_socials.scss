@@ -4,7 +4,7 @@
 .socials {
     gap: 1.5rem;
     grid-template-columns: repeat(4, 1fr);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     @include breakpoint(large) {
         font-size: 2rem;
     }

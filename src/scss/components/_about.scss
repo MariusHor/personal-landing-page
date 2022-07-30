@@ -18,6 +18,8 @@
     }
 
     &__skill {
+        transition: 0.8s ease-in-out;
+        opacity: 0;
         padding: 1.5rem;
         max-width: 30rem;
         height: fit-content;
@@ -57,12 +59,15 @@
 
     .skill__text {
         color: #687081;
-        padding-right: 3rem;
+        text-align: center;
         font-family: $ff-primary;
         font-size: 0.925rem;
         transition: 0.3s ease-in-out; 
+        @include breakpoint(small) {
+            text-align: initial;
+            padding-right: 1rem;
+        }
         @include breakpoint(large) {
-            padding-right: 0;
             font-size: 1rem;
         }
     }

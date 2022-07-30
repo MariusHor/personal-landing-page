@@ -2,8 +2,8 @@
 
 //HAMBURGER MENU
 .hamburger {
+  position: initial;
   cursor: pointer;
-  z-index: 1000;
 
   @include breakpoint(large) {
     position: fixed;

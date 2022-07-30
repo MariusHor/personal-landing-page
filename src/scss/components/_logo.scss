@@ -3,6 +3,7 @@
 //LOGO
 
 .logo {
+  display: flex;
   max-width: 150px;
   &__img {
     transition: ease-in-out 200ms;

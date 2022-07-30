@@ -6,15 +6,15 @@
   display: flex;
   align-items: center;
   &__container {
-    @extend %center;
-    gap: 2rem;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     height: fit-content
   }
 
   //NAV RIGHT MENU
   &__right {
-    @extend %center;
+    z-index: 1000;
+    justify-self: end;
     gap: 1rem;
     @include breakpoint(medium) {
       gap: 0;
