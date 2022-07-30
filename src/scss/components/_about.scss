@@ -6,13 +6,16 @@
 }
 
 .about {
+    padding: 5rem 0;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     &__skills {
         display: grid;
         align-self: start;
+        gap: 3rem;
         @include breakpoint(large) {
+            gap: 0;
             grid-template-rows: repeat(2, 1fr);
         }
     }
@@ -20,12 +23,9 @@
     &__skill {
         transition: 0.8s ease-in-out;
         opacity: 0;
-        padding: 1.5rem;
+        padding: 0 1.5rem;
         max-width: 30rem;
         height: fit-content;
-        @include breakpoint(medium) {
-            padding: 1.5rem;
-        }
     }
 
     .skill__icon {
@@ -35,6 +35,10 @@
         color: $color-primary;
         margin: 0 auto;
         margin-top: 1rem;
+        width: 100%;
+        @include breakpoint(small) {
+            text-align: initial;
+        }
         @include breakpoint(large) {
             font-size: 2rem;
         }
@@ -51,7 +55,11 @@
         align-self: center;
         justify-self: center;
         font-weight: 800;
-        width: fit-content;
+        text-align: center;
+        line-height: 1.2;
+        @include breakpoint(small) {
+            text-align: initial;
+        }
         @include breakpoint(large) {
             font-size: 3.5rem;
         }
