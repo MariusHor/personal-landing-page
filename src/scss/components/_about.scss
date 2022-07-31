@@ -150,6 +150,11 @@
 
 .custom-shape-divider-top-1659261943 .shape-fill {
     fill: #f3f3f3;
+    transition: 0.5s ease-in-out;
+}
+
+.dark-theme .custom-shape-divider-top-1659261943 .shape-fill {
+    fill: #000000;
 }
 
 .custom-shape-divider-bottom-1659262453 {
@@ -177,4 +182,9 @@
 
 .custom-shape-divider-bottom-1659262453 .shape-fill {
     fill: #f3f3f3;
+    transition: 0.5s ease-in-out;
+}
+
+.dark-theme .custom-shape-divider-bottom-1659262453 .shape-fill {
+    fill: #000000;
 }

@@ -1,14 +1,17 @@
 @use "../abstracts" as *;
 
 .nav {
-  padding: 1rem;
+  padding: 1rem 0;
   max-height: 5rem;
   display: flex;
   align-items: center;
   &__container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    height: fit-content
+    grid-template-columns: 10fr 1fr 1fr;
+    height: fit-content;
+    @include breakpoint(large) {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 
   //NAV RIGHT MENU
