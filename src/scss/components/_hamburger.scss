@@ -1,23 +1,26 @@
 @use "../abstracts" as *;
 
 //HAMBURGER MENU
+
+.hamburger-container {
+  z-index: 1000;
+  justify-self: end;
+}
+
 .hamburger {
   position: initial;
   cursor: pointer;
-
+  z-index: 1000;
   @include breakpoint(large) {
     position: fixed;
-    transform: translate(-100%, 0);
+    transform: translate(-100%, 0) !important;
   }
-
   &__hamburger:hover {
     transition: $transition-one;
   }
-
   &__hamburger:focus {
     outline: none;
   }
-
   &__bar,
   &__bar--light {
     display: block;
@@ -31,44 +34,37 @@
       height: 4px;
     }
   }
-
   &__bar {
     background-color: #fff;
   }
-
   &__bar--light {
     background-color: #000;
   }
-}
-
-.hamburger:hover .hamburger__bar,
-.hamburger:hover .hamburger__bar--light {
-  background-color: $color-hover;
-}
-
-
-//BARS TRANSITION
-
-.hamburger.active .hamburger__bar:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
-}
-
-.hamburger.active .hamburger__bar--light:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+  &:hover .hamburger__bar,
+  &:hover .hamburger__bar--light {
+    background-color: #04aa6d;
+  }
+  &.active .hamburger__bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  &.active .hamburger__bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  &.active .hamburger__bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  &.active .hamburger__bar--light:nth-child(2) {
+    opacity: 0;
+  }
+  
+  &.active .hamburger__bar--light:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  &.active .hamburger__bar--light:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
 }

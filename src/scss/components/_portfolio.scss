@@ -1,11 +1,15 @@
 @use "../abstracts" as *;
 
 .portfolio {
+    min-width: min-content;
     display: grid;
     padding: 30rem 0;
     position: relative;
 }
 
+//BACKGROUND SHAPES
+
+    //BOTTOM
 .custom-shape-divider-bottom-1659260708 {
     position: absolute;
     bottom: 0;

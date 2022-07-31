@@ -1,0 +1,80 @@
+@use "../abstracts" as *;
+
+.form-wrapper {
+  max-width: 50rem;
+  display: grid;
+  margin: 0 auto;
+}
+
+.form {
+  margin-bottom: 1rem;
+  transition: 0.8s ease-in-out;
+  opacity: 0;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 1.85rem;
+  color: #000;
+  filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.7));
+  @include breakpoint(large) {
+    padding: 3rem;
+  }
+  &__item {
+    margin-bottom: 2rem;
+  }
+  &__label {
+    font-weight: 600;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.7);
+  }
+  &__textarea {
+    border: 0;
+    background-color: #f2f2f2;
+    height: 100px;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid rgba(89, 0, 255, 0.4);
+    resize: vertical;
+    transition: ease-in-out 0.5s;
+  }
+  &__input {
+    border: 0;
+    background-color: #f2f2f2;
+    width: 100%;
+    padding: 12px;
+    border-bottom: 1px solid rgba(89, 0, 255, 0.4);
+    resize: vertical;
+    transition: ease-in-out 0.5s;
+  }
+  &__input:focus,
+  textarea:focus {
+    border-radius: 5px;
+    outline-width: 0;
+    background-color: $color-primary;
+    color: white;
+  }
+  &__input:focus::placeholder,
+  textarea:focus::placeholder {
+    color: white;
+  }
+  &__btn {
+    background-color: #04aa6d;
+    font-size: 1.1rem;
+    color: white;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.3));
+    transition: 0.4s ease-in-out;
+    @include breakpoint(large) {
+      padding: 12px 20px;
+    }
+  }
+  &__btn:hover {
+    background-color: #357a39;
+  }
+  input {
+    width: 100%;
+  }
+}

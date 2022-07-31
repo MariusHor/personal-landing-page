@@ -1,7 +1,7 @@
-document.addEventListener('mousemove', triangleMove);
+document.addEventListener('mousemove', objectMove);
 let object = document.querySelectorAll('.object');
 
-function triangleMove(e) {
+function objectMove(e) {
     object.forEach(function(move) {
 
         let moving_value = move.getAttribute('data-value');
@@ -14,7 +14,8 @@ function triangleMove(e) {
 
 
 let buttons = document.querySelectorAll('.scrolldown-btn')
-let socialBar = document.querySelectorAll('.socials--bar')
+const socialBar = document.querySelectorAll('.socials--bar')
+const navigator = document.querySelectorAll('.navigator')
 const hero = document.querySelector('.hero__text').children;
 const heroLen = hero.length;
 let index = 0;
@@ -25,6 +26,9 @@ function animate() {
     }
     for (const social of socialBar) {
         social.classList.add('active');
+    }
+    for (const nav of navigator) {
+        nav.classList.add('active');
     }
     hero[index].classList.add('active')
     if (index == heroLen-1) {

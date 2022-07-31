@@ -1,134 +1,121 @@
 @use "../abstracts" as *;
 
 .hero {
-    height: 100%;
+  display: grid;
+  &__container {
     display: grid;
+    gap: 3rem;
+    @include breakpoint(large) {
+      grid-template-columns: 2fr 1fr;
+      gap: 2rem;
+    }
+    @media screen and (min-height: 800px) and (max-width: 1000px) {
+      gap: 6rem;
+    }
+  }
+  &__left {
+    align-self: center;
+  }
+  &__text {
+    max-width: 50rem;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    &__container {
-        display: grid;
-        gap: 3rem;
-        @include breakpoint(large) {
-          grid-template-columns: 2fr 1fr;
-          gap: 2rem;
-        }
-        @media screen and (min-height: 800px) and (max-width: 1000px) {
-          gap: 6rem;
-        }
+    text-align: center;
+    @include breakpoint(small) {
+      display: grid;
+      text-align: initial;
     }
-
-    &__left {
-      height: fit-content;
-      align-self: center;
-    }
-
-    &__text {
-        max-width: 50rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        @include breakpoint(small) {
-          display: grid;
-          text-align: initial;
-        }
-    }
-
-    &__picture {
-      align-self: center;
-      max-width: 150px;
-      margin: 0 auto;
-
-      @include breakpoint(small) {
-        max-width: 200px;
-      }
-      @include breakpoint(medium) {
-        max-width: 225px;
-      }
-      @include breakpoint(large) {
-        max-width: 300px;
-      }
-    }
-
-    .ob {
-      background: #B993D6;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      
-      border-top-left-radius: 80px 80px;
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-      transition: 0.8s ease-in-out;
-      @include breakpoint(large) {
-      }
-    }
-
-    .ob:hover {
-      background: #B993D6;  /* fallback for old browsers */
-      background: -webkit-linear-gradient(to right, #8CA6DB, #B993D6);  /* Chrome 10-25, Safari 5.1-6 */
-      background: linear-gradient(to right, #8CA6DB, #B993D6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-      
-      border-top-left-radius: 80px 80px;
-      border-bottom-left-radius: 50%;
-      border-bottom-right-radius: 50%;
-    }
-
-    .ob:hover  &__author-img {
-      @include breakpoint(large) {
-        transform: scale(0.85);
-      }
-    }
-
-    &__author-img {
-      border-radius: 50%;
-      position: relative;
-      transition: .7s ease-in-out;
-    }
-
-    &__title {
-        opacity: 0;
-        transform: translateY(200%);
-        font-size: 3rem;
-        margin-bottom: 0.5rem;
-        line-height: 1;
-        @include breakpoint(medium) {
-          font-size: 3.5rem;
-        }
-        @include breakpoint(large) {
-          margin-bottom: 0;
-          font-size: 4rem;
-        }
-    }
-
-    &__description {
-        opacity: 0;
-        transform: translateY(200%);
-        margin-bottom: 2rem;
-        font-weight: 500;
-        font-size: 1rem;
-        @include breakpoint(large) {
-            font-size: 1.25rem;
-        }
-    }
-}
-
-.light-theme {
-  .hero__description {
-    color: rgba(0,0,0,0.7);
   }
-} 
-
-.dark-theme {
-  transition: ease-in-out 0.5s;
-  .hero__description {
-    color: #D5D5D5;
+  &__title {
+    opacity: 0;
+    transform: translateY(200%);
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    line-height: 1;
+    @include breakpoint(medium) {
+      font-size: 3.5rem;
+    }
+    @include breakpoint(large) {
+      margin-bottom: 0;
+      font-size: 4rem;
+    }
   }
-} 
+  &__description {
+    font-size: 1rem;
+    opacity: 0;
+    transform: translateY(200%);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    @include breakpoint(small) {
+      font-size: 1.15rem;
+    }
+    @include breakpoint(large) {
+      font-size: 1.25rem;
+    }
+  }
+  &__picture {
+    align-self: center;
+    max-width: 175px;
+    margin: 0 auto;
+    @include breakpoint(small) {
+      max-width: 200px;
+    }
+    @include breakpoint(medium) {
+      max-width: 225px;
+    }
+    @include breakpoint(large) {
+      max-width: 300px;
+      display: initial;
+      bottom: -70%;
+      z-index: 0;
+    }
+  }
+  &__picture-container {
+    background: #b993d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #8ca6db,
+      #b993d6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #8ca6db,
+      #b993d6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-.active {
-  transform: translateY(0%);
-  transition: 400ms ease-in;
-  opacity: 1 !important;
+    border-top-left-radius: 80px 80px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    transition: 0.8s ease-in-out;
+    @include breakpoint(large) {
+    }
+  }
+  &__picture-container:hover {
+    background: #b993d6; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #8ca6db,
+      #b993d6
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #8ca6db,
+      #b993d6
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    border-top-left-radius: 80px 80px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+  }
+  &__picture-container:hover &__author-img {
+    @include breakpoint(large) {
+      transform: scale(0.85);
+    }
+  }
+  &__author-img {
+    border-radius: 50%;
+    position: relative;
+    transition: 0.7s ease-in-out;
+  }
 }
-
-
-

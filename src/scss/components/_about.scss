@@ -1,190 +1,139 @@
 @use "../abstracts" as *;
 
-.tools {
-    display: flex;
-    flex-direction: column;
-}
-
-.about {
-    position: relative;
-    background: $color-primary;
-    padding: 5rem 0;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    &__skills {
-        display: grid;
-        align-self: start;
-        gap: 3rem;
-        @include breakpoint(large) {
-            gap: 0;
-            grid-template-rows: repeat(2, 1fr);
-        }
-    }
-
-    &__skill {
-        transition: 0.8s ease-in-out;
-        opacity: 0;
-        padding: 0 1.5rem;
-        max-width: 30rem;
-        height: fit-content;
-    }
-
-    .skill__icon {
-        color: white;
-        align-self: center;
-        font-size: 1.5rem;
-        text-align: center;
-        margin: 0 auto;
-        margin-top: 1rem;
-        width: 100%;
-        @include breakpoint(small) {
-            text-align: initial;
-        }
-        @include breakpoint(large) {
-            font-size: 2rem;
-        }
-    }
-
-
-    .skill__title {
-        color: white;
-        position: relative;
-        text-align: center;
-        font-family: $ff-secondary;
-        font-size: 2.5rem;
-        transition: 0.6s ease-in-out; 
-        align-self: center;
-        justify-self: center;
-        font-weight: 800;
-        text-align: center;
-        line-height: 1.2;
-        @include breakpoint(small) {
-            text-align: initial;
-        }
-        @include breakpoint(large) {
-            font-size: 3.5rem;
-        }
-    }
-
-    .skill__text {
-        color: rgb(212, 212, 212);
-        text-align: center;
-        font-family: $ff-primary;
-        font-size: 0.925rem;
-        transition: 0.3s ease-in-out; 
-        @include breakpoint(small) {
-            text-align: initial;
-            padding-right: 1rem;
-        }
-        @include breakpoint(large) {
-            font-size: 1rem;
-        }
-    }
-
-    .design {
-        justify-self: end;
-    }
-}
-
-.tools__container {
+.services {
+  min-width: min-content;
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: $color-primary;
+  padding: 5rem 0;
+  &__skills {
     display: grid;
-    column-gap: 1rem;
-    grid-template-columns: repeat(2, 1fr);
-    @include breakpoint(medium) {
-        grid-template-columns: repeat(3, 1fr);
+    gap: 4rem;
+    @include breakpoint(large) {
+      gap: 0;
+      grid-template-rows: repeat(2, 1fr);
+    }
+  }
+  &__skill {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: 0.8s ease-in-out;
+    opacity: 0;
+    padding: 0 1.5rem;
+    max-width: 30rem;
+    height: fit-content;
+  }
+  .skill__icon {
+    color: white;
+    align-self: center;
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    @include breakpoint(small) {
+      text-align: initial;
     }
     @include breakpoint(large) {
-        grid-template-columns: repeat(4, 1fr);
+      font-size: 2rem;
     }
-    
+  }
+  .skill__title {
+    color: white;
+    position: relative;
+    text-align: center;
+    font-family: $ff-secondary;
+    font-size: 2.5rem;
+    transition: 0.6s ease-in-out;
+    font-weight: 800;
+    line-height: 1.2;
+    @include breakpoint(small) {
+      text-align: initial;
+    }
+    @include breakpoint(large) {
+      font-size: 3.5rem;
+    }
+  }
+  .skill__text {
+    color: rgb(212, 212, 212);
+    text-align: center;
+    font-family: $ff-primary;
+    font-size: 0.925rem;
+    transition: 0.3s ease-in-out;
+    @include breakpoint(small) {
+      text-align: initial;
+      padding-right: 1rem;
+    }
+    @include breakpoint(large) {
+      font-size: 1rem;
+    }
+  }
+  &__design {
+    justify-self: end;
+  }
 }
 
-.tools__item {
-    max-width: 10rem;
-    margin: 0 auto;
-    width: fit-content;
-    background: white;
-    border-radius: 10px;
-    padding: 2rem;
-    transition: 0.4s ease-in-out;
-    height: fit-content;
-}
+//BACKGROUND SHAPES
 
-.about__list:hover {
-    filter: drop-shadow(20px 20px 10px rgba(255, 255, 255, 0.2));
-}
-
-.fa-check {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: $color-primary;
-    margin-right: 1rem;
-}
-
-.dark-theme .skill__text {
-    color: #d5d5d5;
-}
-
+    //TOP
 .custom-shape-divider-top-1659261943 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider-top-1659261943 svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  svg {
     position: relative;
     display: block;
     width: calc(158% + 1.3px);
     height: 30px;
     @include breakpoint(medium) {
-        height: 50px;
+      height: 50px;
     }
     @include breakpoint(large) {
-        height: 70px;
+      height: 70px;
     }
-}
-
-.custom-shape-divider-top-1659261943 .shape-fill {
+  }
+  .shape-fill {
     fill: #f3f3f3;
     transition: 0.5s ease-in-out;
+  }
 }
 
 .dark-theme .custom-shape-divider-top-1659261943 .shape-fill {
-    fill: #000000;
+  fill: #000000;
 }
 
+    //BOTTOM
 .custom-shape-divider-bottom-1659262453 {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
-
-.custom-shape-divider-bottom-1659262453 svg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+  svg {
     position: relative;
     display: block;
     width: calc(158% + 1.3px);
     height: 30px;
     @include breakpoint(medium) {
-        height: 50px;
+      height: 50px;
     }
     @include breakpoint(large) {
-        height: 70px;
+      height: 70px;
     }
-}
-
-.custom-shape-divider-bottom-1659262453 .shape-fill {
+  }
+  .shape-fill {
     fill: #f3f3f3;
     transition: 0.5s ease-in-out;
+  }
 }
 
 .dark-theme .custom-shape-divider-bottom-1659262453 .shape-fill {
-    fill: #000000;
+  fill: #000000;
 }

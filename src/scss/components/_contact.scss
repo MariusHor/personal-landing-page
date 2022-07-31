@@ -1,44 +1,11 @@
 @use "../abstracts" as *;
 
 .contact {
+  min-width: min-content;
   background: $color-primary;
   padding: 5rem 0;
-}
-
-.form-wrapper {
-  max-width: 50rem;
-  display: grid;
-  margin: 0 auto;
-}
-
-form > div {
-  margin-bottom: 2rem;
-}
-
-.section__title {
-  text-align: center;
-  font-size: 3rem;
-  line-height: 1;
-
-  @include breakpoint(medium) {
-    font-size: 3.25rem;
-  }
-  @include breakpoint(large) {
-    font-size: 3.5rem;
-  }
-}
-
-.section__subtitle {
-  font-size: 1.15rem;
-  @include breakpoint(medium) {
-    font-size: 1.3rem;
-  }
-  @include breakpoint(large) {
-    font-size: 1.45rem;
-  }
-}
-
-.contact__text {
+  &__text {
+    color: white;
     opacity: 0;
     transition: 0.8s ease-in-out;
     text-align: center;
@@ -46,105 +13,5 @@ form > div {
     @include breakpoint(large) {
       margin-bottom: 5rem;
     }
-}
-
-.accent-bkg-text {
-  color: #f3f4f6;
-}
-
-.row {
-  margin-bottom: 2rem;
-}
-
-.wide {
-  border: 0;
-  background-color: #f2f2f2;
-  width: 100%;
-  padding: 12px;
-  border-bottom: 1px solid rgba(89, 0, 255, 0.4);
-  resize: vertical;
-  transition: ease-in-out 0.5s;
-}
-
-.wide:focus, textarea:focus {
-  border-radius: 5px;
-  outline-width: 0;
-  background-color: $color-primary;
-  color: white;
-}
-
-.wide:focus::placeholder, textarea:focus::placeholder {
-  color: white;
-}
-
-textarea {
-  border: 0;
-  background-color: #f2f2f2;
-  height: 100px;
-  width: 100%;
-  padding: 12px;
-  border-bottom: 1px solid rgba(89, 0, 255, 0.4);
-  resize: vertical;
-  transition: ease-in-out 0.5s;
-}
-
-label {
-  font-weight: 600;
-
-  display: inline-block;
-  color: rgba(0,0,0,.7);
-}
-
-input[type=submit] {
-  background-color: #04AA6D;
-  font-size: 1.1rem;
-  color: white;
-  padding: 8px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-  filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.3));
-  transition: 0.4s ease-in-out;
-  @include breakpoint(large) {
-    padding: 12px 20px;
   }
-}
-
-input[type=submit]:hover {
-  background-color: #357a39;
-}
-
-.contact__form {
-  margin-bottom: 1rem;
-  transition: 0.8s ease-in-out;
-  opacity: 0;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 1.85rem;
-  color: #000;
-  filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.7));
-  @include breakpoint(large) {
-    padding: 3rem;
-  }
-}
-
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-.center {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-}
-
-
-input {
-  width: 100%;
 }

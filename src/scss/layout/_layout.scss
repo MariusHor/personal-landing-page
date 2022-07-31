@@ -1,5 +1,7 @@
 @use "../abstracts" as *;
 
+//CONTAINERS
+
   .l-container {
     width: clamp(16rem, 90vw, 100rem);
     margin-left: auto;
@@ -13,41 +15,76 @@
   }
 
   .s-container {
-    width: clamp(16rem, 75vw, 70rem);
+    width: clamp(16rem, 80vw, 70rem);
     margin-left: auto;
     margin-right: auto;
     @include breakpoint(large) {
-      width: clamp(16rem, 80vw, 85rem);
+      width: clamp(16rem, 85vw, 85rem);
   }
   }
+
+//HEADER
 
   .header {
     display: grid;
     min-height: 100vh;
     gap: 2rem;
-    .object {
-      @include breakpoint(large) {
-        display: initial;
-        bottom: -70%;
-        right: -5%;
-        z-index: 0;
-      }
-    }
   }
 
-  .section__title {
-    margin-left: auto; 
-    margin-right: auto;
-    color: $color-primary;
-    align-self: center;
-  }
-
-  .contact__text .section__title {
-    color: white;
-  }
+//SECTION
 
   .section {
     flex: 1;
     display: grid;
     align-content: center;
+    &__title {
+      font-size: 3rem;
+      line-height: 1;
+      @include breakpoint(medium) {
+        font-size: 3.25rem;
+      }
+      @include breakpoint(large) {
+        font-size: 3.5rem;
+      }
+    }
+    &__subtitle {
+      font-size: 1.15rem;
+      @include breakpoint(medium) {
+        font-size: 1.3rem;
+      }
+      @include breakpoint(large) {
+        font-size: 1.45rem;
+      }
+    }
+  }
+
+//THEMES
+
+  .light-theme {
+    .hero__description {
+      color: rgba(0,0,0,0.7);
+    }
+  } 
+  
+  .dark-theme {
+    transition: ease-in-out 0.5s;
+    .hero__description {
+      color: #D5D5D5;
+    }
+  } 
+
+//STATES
+
+  .active {
+    transform: translateY(0%);
+    transition: 400ms ease-in;
+    opacity: 1 !important;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .overflow-hidden {
+    overflow: hidden;
   }
