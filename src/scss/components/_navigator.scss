@@ -10,8 +10,7 @@
     transform: translateY(-50%) !important;
     display: none;
     opacity: 0;
-    @include breakpoint(medium) {
-      font-size: 1.7rem;
+    @include breakpoint(large) {
       display: flex;
       flex-direction: column;
       padding: 0.6rem;
@@ -20,13 +19,20 @@
     }
     &__item {
         cursor: pointer;
-        padding: 0.2rem;
+        padding: 0.15rem;
         border: solid 3px #05c27d;
         transition: 0.4s ease-in-out;
-        border-radius: 2px;
+        border-radius: 1.5px;
+        @include breakpoint(xlarge) {
+          padding: 0.2rem;
+        }
+        @include breakpoint(2xlarge) {
+          padding: 0.25rem;
+        }
     }
     &__item:hover {
         background: #05c27d;
         border-radius: 50%;
-    }
+        transform: scale(1.5);
+    }  
   }
