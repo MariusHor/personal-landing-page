@@ -3,4 +3,31 @@
 .portfolio {
     display: grid;
     padding: 30rem 0;
+    position: relative;
+}
+
+.custom-shape-divider-bottom-1659260708 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1659260708 svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 30px;
+    @include breakpoint(medium) {
+        height: 50px;
+    }
+    @include breakpoint(large) {
+        height: 70px;
+    }
+}
+
+.custom-shape-divider-bottom-1659260708 .shape-fill {
+    fill: #7510F7;
 }

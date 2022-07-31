@@ -6,6 +6,8 @@
 }
 
 .about {
+    position: relative;
+    background: $color-primary;
     padding: 5rem 0;
     min-height: 100vh;
     display: flex;
@@ -29,10 +31,10 @@
     }
 
     .skill__icon {
+        color: white;
         align-self: center;
         font-size: 1.5rem;
         text-align: center;
-        color: $color-primary;
         margin: 0 auto;
         margin-top: 1rem;
         width: 100%;
@@ -46,7 +48,7 @@
 
 
     .skill__title {
-        color: $color-primary;
+        color: white;
         position: relative;
         text-align: center;
         font-family: $ff-secondary;
@@ -66,7 +68,7 @@
     }
 
     .skill__text {
-        color: #687081;
+        color: rgb(212, 212, 212);
         text-align: center;
         font-family: $ff-primary;
         font-size: 0.925rem;
@@ -122,4 +124,57 @@
 
 .dark-theme .skill__text {
     color: #d5d5d5;
+}
+
+.custom-shape-divider-top-1659261943 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1659261943 svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 30px;
+    @include breakpoint(medium) {
+        height: 50px;
+    }
+    @include breakpoint(large) {
+        height: 70px;
+    }
+}
+
+.custom-shape-divider-top-1659261943 .shape-fill {
+    fill: #f3f3f3;
+}
+
+.custom-shape-divider-bottom-1659262453 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1659262453 svg {
+    position: relative;
+    display: block;
+    width: calc(158% + 1.3px);
+    height: 30px;
+    @include breakpoint(medium) {
+        height: 50px;
+    }
+    @include breakpoint(large) {
+        height: 70px;
+    }
+}
+
+.custom-shape-divider-bottom-1659262453 .shape-fill {
+    fill: #f3f3f3;
 }
