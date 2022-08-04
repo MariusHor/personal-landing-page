@@ -2,8 +2,8 @@ const themeBtn = document.querySelector('.theme-switch')
 const moonIcon = document.getElementById('moon-icon')
 const sunIcon = document.getElementById('sun-icon')
 const body = document.querySelector('body')
-const navMenu = document.querySelector('.fullscreen-menu--light')
-let bars = document.querySelectorAll('.hamburger__bar--light')
+const navMenu = document.querySelector('.fullscreen-menu')
+let bars = document.querySelectorAll('.hamburger__bar')
 
 themeBtn.addEventListener('click', () => {
     document.body.classList.toggle('light-theme')

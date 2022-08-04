@@ -1,4 +1,4 @@
-const navMenu = document.querySelector('.fullscreen-menu--light');
+const navMenu = document.querySelector('.fullscreen-menu');
 const hamburger = document.querySelector('.hamburger');
 const body = document.querySelector('body')
 let show = document.querySelectorAll('.show')
