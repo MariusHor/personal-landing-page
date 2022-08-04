@@ -1,9 +1,13 @@
 @use "../abstracts" as *;
 
 .contact {
+  position: relative;
   min-width: min-content;
   background: $color-primary;
   padding: 5rem 0;
+  @include breakpoint(large) {
+    padding: 5rem 0 7rem;
+  }
   &__text {
     color: white;
     opacity: 0;
