@@ -16,7 +16,7 @@ function objectMove(e) {
 let buttons = document.querySelectorAll('.scrolldown-btn')
 const socialBar = document.querySelectorAll('.socials--bar')
 const navigator = document.querySelectorAll('.navigator')
-const hero = document.querySelector('.hero__text').children;
+const hero = document.querySelector('.hero__left').children;
 const heroLen = hero.length;
 let index = 0;
 

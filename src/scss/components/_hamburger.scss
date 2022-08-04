@@ -11,10 +11,6 @@
   position: initial;
   cursor: pointer;
   z-index: 1000;
-  @include breakpoint(large) {
-    position: fixed;
-    transform: translate(-100%, 0) !important;
-  }
   &__hamburger:hover {
     transition: $transition-one;
   }

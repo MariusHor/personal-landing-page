@@ -4,7 +4,7 @@ import './scss/main.scss';
 import './js/index.js';
 
 import './img/logo.svg'
-import './img/bg-desktop.svg'
+import './img/bg-desktop.png'
 import './img/profile.png'
 import './img/js.png'
 import './img/html.png'

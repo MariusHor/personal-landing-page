@@ -1,10 +1,10 @@
 @use "../abstracts" as *;
 
 .navigator {
-    margin-left: 2rem;
+    margin-right: 2rem;
     position: fixed;
     top: 50%;
-    left: 0;
+    right: 0;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%) !important;
@@ -15,7 +15,6 @@
       flex-direction: column;
       padding: 0.6rem;
       gap: 2rem;
-      filter: drop-shadow(0px 0px 7px rgba(255, 255, 255, 0.3));
     }
     &__item {
         cursor: pointer;
@@ -23,6 +22,7 @@
         border: solid 3px #05c27d;
         transition: 0.4s ease-in-out;
         border-radius: 1.5px;
+        filter: drop-shadow(0px 0px 7px rgba(1, 1, 1, 0.2));
         @include breakpoint(xlarge) {
           padding: 0.2rem;
         }
