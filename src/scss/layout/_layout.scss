@@ -6,23 +6,20 @@
     width: clamp(16rem, 90vw, 100rem);
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
   }
 
   .m-container {
-    width: clamp(16rem, 90vw, 90rem);
+    width: clamp(16rem, 80vw, 90rem);
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
   }
 
   .s-container {
-    width: clamp(16rem, 80vw, 70rem);
+    width: clamp(16rem, 70vw, 70rem);
     margin-left: auto;
     margin-right: auto;
-    padding: 0 1rem;
     @include breakpoint(large) {
-      width: clamp(16rem, 85vw, 85rem);
+      width: clamp(16rem, 75vw, 85rem);
   }
   }
 
