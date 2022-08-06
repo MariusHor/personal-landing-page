@@ -64,6 +64,7 @@
   width: fit-content;
   justify-self: center;
   margin-right: 1rem;
+  z-index: 500;
   @include breakpoint(small) {
     margin-right: 0rem;
     font-size: 1.5rem;

@@ -16,9 +16,9 @@ console.log(show)
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
-    body.classList.toggle('overflow-hidden')
+    body.classList.toggle('overflow-hidden');
     setTimeout(() => {     for (const item of show) {
-        item.classList.toggle('active')
+        item.classList.add('active')
     } }, 500);
 });
 
@@ -30,6 +30,18 @@ for (const item of show) {
         for (const item of show) {
             item.classList.remove('active')
         }
+
+        for (const item of show) {
+            if (item.classList.contains('.services-link')) {
+                services.scrollIntoView();
+            }
+            else if (item.classList.contains('.portfolio-link')) {
+                portfolio.scrollIntoView();
+            } 
+            else if (item.classList.contains('.contact-link')) {
+                contact.scrollIntoView();}
+        }
+
     });
 }
 
