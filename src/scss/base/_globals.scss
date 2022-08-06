@@ -6,7 +6,7 @@ body {
     color: $color-secondary;
     font-family: $ff-primary;
     line-height: 1.7;
-    
+    min-width: fit-content;
     @include breakpoint(large) {
       font-size: $font-med;
   }

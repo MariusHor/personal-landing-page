@@ -3,24 +3,24 @@
 //CONTAINERS
 
   .l-container {
-    width: clamp(16rem, 90vw, 100rem);
     margin-left: auto;
     margin-right: auto;
+    max-width: 100rem;
+    padding: 0 1rem;
   }
 
   .m-container {
-    width: clamp(16rem, 90vw, 90rem);
     margin-left: auto;
     margin-right: auto;
+    max-width: 90rem;
+    padding: 0 1rem;
   }
 
   .s-container {
-    width: clamp(16rem, 80vw, 70rem);
+    max-width: 70rem;
     margin-left: auto;
     margin-right: auto;
-    @include breakpoint(large) {
-      width: clamp(16rem, 85vw, 85rem);
-  }
+    padding: 0 1rem;
   }
 
 //HEADER
@@ -65,10 +65,15 @@
 
 .circles li:nth-child(1){
     left: 25%;
-    width: 80px;
-    height: 80px;
+    width: 30px;
+    height: 30px;
     animation-delay: 0s;
     display: none;
+    @include breakpoint(small) {
+      display: initial;
+      width: 70px;
+      height: 70px;
+    }
 }
 
 
@@ -112,19 +117,25 @@
 
 .circles li:nth-child(6){
     left: 75%;
-    width: 90px;
-    height: 90px;
+    width: 40px;
+    height: 40px;
     animation-delay: 3s;
+    @include breakpoint(small) {
+      width: 90px;
+      height: 90px;
+    }
 }
 
 .circles li:nth-child(7){
     left: 35%;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     animation-delay: 7s;
     display: none;
     @include breakpoint(small) {
       display: initial;
+      width: 90px;
+      height: 90px;
     }
 }
 
@@ -150,12 +161,14 @@
 
 .circles li:nth-child(10){
     left: 85%;
-    width: 150px;
-    height: 150px;
+    width: 60px;
+    height: 60px;
     animation-delay: 0s;
     animation-duration: 21s;
     @include breakpoint(small) {
       display: initial;
+      width: 100px;
+      height: 100px;
     }
 }
 
