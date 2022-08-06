@@ -222,21 +222,22 @@
           </div>
 
           <div class="form-wrapper">
-              <form class="form reveal" action="/action_page.php" autocomplete="off">
+              <form class="form reveal" name="contact" method="POST" data-netlify="true" autocomplete="off">
+                <input type="hidden" name="_next" value="http://localhost:3000/">
                 <div class="form__item">
-                  <label class="form__label" for="fname">Name</label>
+                  <label class="form__label" for="name">Name</label>
                   <input
                     class="form__input"
                     type="text"
-                    id="fname"
-                    name="firstname"
+                    id="name"
+                    name="name"
                     placeholder="Enter your name"
                     autocomplete="false"
                     required
                   />
                 </div>
                 <div class="form__item">
-                  <label class="form__label" for="country">E-mail</label>
+                  <label class="form__label" for="email">E-mail</label>
                   <input
                     class="form__input"
                     type="email"
@@ -250,8 +251,8 @@
                   <label class="form__label" for="subject">Message</label>
                   <textarea
                     class="form__textarea"
-                    id="subject"
-                    name="subject"
+                    id="message"
+                    name="message"
                     placeholder="Write something"
                   ></textarea>
                 </div>
