@@ -68,4 +68,10 @@ for (const cont of contactLink) {
     cont.addEventListener('click', () => {
         contact.scrollIntoView();
     })
-}
+};
+
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('.nav');
+    nav.classList.toggle('sticky', window.scrollY > 0);
+})
+
