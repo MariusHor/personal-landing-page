@@ -1,12 +1,12 @@
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: "./src/app.js",
-  mode: "development",
-  devtool: "inline-source-map",
+  entry: './src/app.js',
+  mode: 'development',
+  devtool: 'inline-source-map',
   devServer: {
     open: true,
     port: 3000,
@@ -20,66 +20,80 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/i, //For making turning Js6 to Js5 and make it compatible with older browsers
+        test: /\.js$/i,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
-          }
-        }
+            presets: ['@babel/preset-env'],
+          },
+        },
       },
 
       {
-        test: /\.ttf|woff$/, //For fonts
+        test: /\.ttf|woff$/, // For fonts
         use: [
           'url-loader',
         ],
-        },
+      },
 
       {
         test: /\.mp4/,
         type: 'asset/resource',
         generator: {
-          filename: 'video/[hash][ext][query]'
-          }
+          filename: 'video/[hash][ext][query]',
+        },
       },
-      
+
       {
-        test: /\.s?css$/, //For turning the scss file into a css file
+        test: /\.s?css$/, // For turning the scss file into a css file
         use: [
           MiniCssExtractPlugin.loader,
-          "css-loader",
-          "sass-loader"
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              sourceMap: true,
+            },
+          },
+          {
+            loader: 'postcss-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+            },
+          },
         ],
       },
 
       {
-        test: /\.(png|svg|jpg|jpeg|ico|gif|webp)$/i, //For images
-        type: "asset/resource",
+        test: /\.(png|svg|jpg|jpeg|ico|gif|webp)$/i, // For images
+        type: 'asset/resource',
         generator: {
-        filename: 'assets/[hash][ext][query]'
-        }
+          filename: 'assets/[hash][ext][query]',
+        },
       },
 
       {
         test: /\.html$/,
         use: {
-          loader: "html-loader",
-        }
+          loader: 'html-loader',
+        },
       },
     ],
   },
 
   plugins: [
     new HtmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "./index.html",
-      inject: "body",
+      template: './src/index.html',
+      filename: './index.html',
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
-      filename: "style/[name].css",
-      chunkFilename: "[id].css"
+      filename: 'style/[name].css',
+      chunkFilename: '[id].css',
     }),
   ],
 
@@ -87,10 +101,11 @@ module.exports = {
     minimize: true,
     minimizer: [
       new TerserPlugin({
-      extractComments: false,
+        extractComments: false,
       }),
-      new OptimizeCssAssetsPlugin(),
+      new CssMinimizerPlugin(),
     ],
-    },
+  },
 };
+
 

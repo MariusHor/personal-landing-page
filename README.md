@@ -1,34 +1,43 @@
-# portfolio-landing-page
+<p text align="center">
+    <img src="/img/logo.svg">
+<p>
 
-Empty project.
+# Marius Horghidan Personal Portfolio
 
-## Building and running on localhost
+### 👋 Hello there 
 
-First install dependencies:
+Welcome to my personal portfolio code source. Here you can see how I built this project and what kind of tools I've used in this process.
 
-```sh
-npm install
-```
+## 👨‍💻 Table of contents
 
-To run in hot module reloading mode:
+- [Overview](#-overview)
+  - [Live website](#live-website)
+- [My process](#-my-process)
+  - [Built with](#built-with)
+- [Contact](#-contact-me)
 
-```sh
-npm start
-```
+## 🔭 Overview
 
-To create a production build:
+### Live website
 
-```sh
-npm run build-prod
-```
+- Live Site URL: (https://mariushorghidan.netlify.app/)
 
-## Running
+## 🚀 My process
 
-```sh
-node dist/bundle.js
-```
+### Built with
 
-## Credits
+- HTML5
+- CSS3
+- SASS
+- JavaScript
+- Webpack
+- BEM
+- FontAwesome
+- Autoprefixer
+- EsLint
+- Prettier 
 
-Made with [createapp.dev](https://createapp.dev/)
 
+## 📫 Contact me 
+
+- marius.horghidan@yahoo.com

@@ -1,5 +1,5 @@
 {
-  "name": "personal-landing-page",
+  "name": "marius-horghidan-landing-page",
   "version": "1.0.0",
   "description": "Empty project.",
   "main": "webpack.config.js",
@@ -10,15 +10,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MariusHor/personal-landing-page.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/MariusHor/personal-landing-page/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/MariusHor/personal-landing-page#readme",
+  "homepage": "",
+  "browserslist": [
+    ">= 0.2%, last 3 versions, not dead, Firefox ESR, Edge >= 16, Explorer >= 10, iOS >= 9, Safari >= 9"
+ ],
   "devDependencies": {
     "@babel/core": "^7.18.9",
     "@babel/preset-env": "^7.18.9",
@@ -29,9 +32,9 @@
     "html-loader": "^4.1.0",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.1",
-    "optimize-css-assets-webpack-plugin": "^6.0.1",
     "postcss": "^8.4.14",
     "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.8.0",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
@@ -39,6 +42,8 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3",
-    "php-loader": "^0.5.0"
+    "eslint": "^8.22.0",
+    "eslint-config-google": "^0.14.0",
+    "autoprefixer": "^10.4.8"
   }
 }
