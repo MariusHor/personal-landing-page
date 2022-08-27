@@ -1,5 +1,5 @@
 <p text align="center">
-    <img src="/img/logo.svg">
+    <img src="/src/img/logo.svg">
 <p>
 
 # Marius Horghidan Personal Portfolio
