@@ -20,7 +20,7 @@ Welcome to my personal portfolio code source. Here you can see how I built this 
 
 ### Live website
 
-<a href="https://mariushorghidan.netlify.app/">Live Site URL<a>
+Check out the Live version of this project: <a href="https://mariushorghidan.netlify.app/">Marius Horghidan Personal Portfolio<a>
 
 ## 🚀 My process
 
