@@ -6,7 +6,7 @@
 
 ### 👋 Hello there 
 
-Welcome to my personal portfolio code source. Here you can see how I built this project and what kind of tools I've used in this process.
+This was my first attempt at building a personal portfolio website. I made the mistake to jump into building a rather big project without having enough knowledge of Javascript and I clearly over complicated things while not really understanding what I was doing :) I will keep this repository as a reminder to the progress that I will be making in the future :)
 
 ## 👨‍💻 Table of contents
 
